@@ -1,0 +1,753 @@
+prefektur_en,industri_id,tipe_kriteria,bonus_tahunan_rata_rata,gaji_pokok_bulanan
+Aichi,Informasi dan Komunikasi,Benefit,1325875,365800
+Aichi,Kesehatan dan Kesejahteraan Sosial,Benefit,827925,308150
+Aichi,Keuangan dan Asuransi,Benefit,1283725,369300
+Aichi,Konstruksi,Benefit,1207100,347750
+Aichi,Layanan Gabungan,Benefit,1165425,309375
+Aichi,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,460350,293600
+Aichi,Layanan Ilmiah/Akademik dan Profesional,Benefit,1316625,362525
+Aichi,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,508975,268150
+Aichi,Layanan Pendidikan dan Pembelajaran,Benefit,1490825,394175
+Aichi,Manufaktur,Benefit,1244700,315025
+Aichi,"Pemasokan Listrik, Gas, dan Air",Benefit,1804450,408900
+Aichi,Perdagangan Besar dan Eceran,Benefit,1079325,322775
+Aichi,Perhotelan dan Restoran (Hospitality),Benefit,363100,265825
+Aichi,Pertambangan dan Penggalian,Benefit,889600,311575
+Aichi,Real Estat dan Penyewaan Barang,Benefit,1022850,330225
+Aichi,Transportasi dan Pos,Benefit,664325,285875
+Akita,Informasi dan Komunikasi,Benefit,1147225,315600
+Akita,Kesehatan dan Kesejahteraan Sosial,Benefit,702250,272525
+Akita,Keuangan dan Asuransi,Benefit,1032450,313625
+Akita,Konstruksi,Benefit,712950,280300
+Akita,Layanan Gabungan,Benefit,673450,273650
+Akita,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,316150,225650
+Akita,Layanan Ilmiah/Akademik dan Profesional,Benefit,926450,291375
+Akita,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,406550,219075
+Akita,Layanan Pendidikan dan Pembelajaran,Benefit,822275,306450
+Akita,Manufaktur,Benefit,590925,225900
+Akita,"Pemasokan Listrik, Gas, dan Air",Benefit,1267575,333250
+Akita,Perdagangan Besar dan Eceran,Benefit,506500,234075
+Akita,Perhotelan dan Restoran (Hospitality),Benefit,190950,207675
+Akita,Pertambangan dan Penggalian,Benefit,730200,254325
+Akita,Real Estat dan Penyewaan Barang,Benefit,625275,252375
+Akita,Transportasi dan Pos,Benefit,573650,252250
+Aomori,Informasi dan Komunikasi,Benefit,845025,290450
+Aomori,Kesehatan dan Kesejahteraan Sosial,Benefit,587550,251925
+Aomori,Keuangan dan Asuransi,Benefit,881025,308300
+Aomori,Konstruksi,Benefit,550875,257025
+Aomori,Layanan Gabungan,Benefit,854950,264325
+Aomori,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,255700,219300
+Aomori,Layanan Ilmiah/Akademik dan Profesional,Benefit,807800,283925
+Aomori,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,399775,212425
+Aomori,Layanan Pendidikan dan Pembelajaran,Benefit,770050,299575
+Aomori,Manufaktur,Benefit,583000,229125
+Aomori,"Pemasokan Listrik, Gas, dan Air",Benefit,1235475,339375
+Aomori,Perdagangan Besar dan Eceran,Benefit,585825,237200
+Aomori,Perhotelan dan Restoran (Hospitality),Benefit,129800,202075
+Aomori,Pertambangan dan Penggalian,Benefit,967175,282725
+Aomori,Real Estat dan Penyewaan Barang,Benefit,767650,267100
+Aomori,Transportasi dan Pos,Benefit,408375,232750
+Chiba,Informasi dan Komunikasi,Benefit,990300,357125
+Chiba,Kesehatan dan Kesejahteraan Sosial,Benefit,703600,306900
+Chiba,Keuangan dan Asuransi,Benefit,1239725,343675
+Chiba,Konstruksi,Benefit,965000,351475
+Chiba,Layanan Gabungan,Benefit,907525,300375
+Chiba,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,408050,266275
+Chiba,Layanan Ilmiah/Akademik dan Profesional,Benefit,1364550,363725
+Chiba,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,520925,269425
+Chiba,Layanan Pendidikan dan Pembelajaran,Benefit,1172500,372200
+Chiba,Manufaktur,Benefit,1030950,307525
+Chiba,"Pemasokan Listrik, Gas, dan Air",Benefit,974075,431325
+Chiba,Perdagangan Besar dan Eceran,Benefit,722550,289525
+Chiba,Perhotelan dan Restoran (Hospitality),Benefit,322875,254400
+Chiba,Pertambangan dan Penggalian,Benefit,1334150,364650
+Chiba,Real Estat dan Penyewaan Barang,Benefit,889025,326250
+Chiba,Transportasi dan Pos,Benefit,594575,285825
+Ehime,Informasi dan Komunikasi,Benefit,1065975,343575
+Ehime,Kesehatan dan Kesejahteraan Sosial,Benefit,594275,262150
+Ehime,Keuangan dan Asuransi,Benefit,1190625,326350
+Ehime,Konstruksi,Benefit,753650,285600
+Ehime,Layanan Gabungan,Benefit,844000,276625
+Ehime,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,354025,250775
+Ehime,Layanan Ilmiah/Akademik dan Profesional,Benefit,1006625,292700
+Ehime,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,437625,223725
+Ehime,Layanan Pendidikan dan Pembelajaran,Benefit,1034075,326950
+Ehime,Manufaktur,Benefit,847525,267000
+Ehime,"Pemasokan Listrik, Gas, dan Air",Benefit,1392350,372425
+Ehime,Perdagangan Besar dan Eceran,Benefit,656975,264500
+Ehime,Perhotelan dan Restoran (Hospitality),Benefit,268550,221225
+Ehime,Pertambangan dan Penggalian,Benefit,510725,217725
+Ehime,Real Estat dan Penyewaan Barang,Benefit,671400,264774
+Ehime,Transportasi dan Pos,Benefit,582925,262075
+Fukui,Informasi dan Komunikasi,Benefit,1057450,331225
+Fukui,Kesehatan dan Kesejahteraan Sosial,Benefit,902300,282200
+Fukui,Keuangan dan Asuransi,Benefit,1068450,327100
+Fukui,Konstruksi,Benefit,847400,307775
+Fukui,Layanan Gabungan,Benefit,780900,289500
+Fukui,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,348150,253325
+Fukui,Layanan Ilmiah/Akademik dan Profesional,Benefit,1007800,303725
+Fukui,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,512850,248450
+Fukui,Layanan Pendidikan dan Pembelajaran,Benefit,1203400,339875
+Fukui,Manufaktur,Benefit,828900,271525
+Fukui,"Pemasokan Listrik, Gas, dan Air",Benefit,1373225,385975
+Fukui,Perdagangan Besar dan Eceran,Benefit,657325,264550
+Fukui,Perhotelan dan Restoran (Hospitality),Benefit,256675,222300
+Fukui,Pertambangan dan Penggalian,Benefit,809275,365050
+Fukui,Real Estat dan Penyewaan Barang,Benefit,648775,266250
+Fukui,Transportasi dan Pos,Benefit,418825,264300
+Fukuoka,Informasi dan Komunikasi,Benefit,1063950,351125
+Fukuoka,Kesehatan dan Kesejahteraan Sosial,Benefit,679100,282225
+Fukuoka,Keuangan dan Asuransi,Benefit,1277550,343575
+Fukuoka,Konstruksi,Benefit,1142775,336350
+Fukuoka,Layanan Gabungan,Benefit,1035075,299125
+Fukuoka,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,425400,265025
+Fukuoka,Layanan Ilmiah/Akademik dan Profesional,Benefit,1150400,344150
+Fukuoka,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,468275,247900
+Fukuoka,Layanan Pendidikan dan Pembelajaran,Benefit,1154425,354450
+Fukuoka,Manufaktur,Benefit,894850,275300
+Fukuoka,"Pemasokan Listrik, Gas, dan Air",Benefit,1618100,423875
+Fukuoka,Perdagangan Besar dan Eceran,Benefit,868175,297700
+Fukuoka,Perhotelan dan Restoran (Hospitality),Benefit,315050,239550
+Fukuoka,Pertambangan dan Penggalian,Benefit,1004050,315100
+Fukuoka,Real Estat dan Penyewaan Barang,Benefit,999400,309350
+Fukuoka,Transportasi dan Pos,Benefit,534875,256425
+Fukushima,Informasi dan Komunikasi,Benefit,908250,297425
+Fukushima,Kesehatan dan Kesejahteraan Sosial,Benefit,688800,270825
+Fukushima,Keuangan dan Asuransi,Benefit,1083525,325550
+Fukushima,Konstruksi,Benefit,647900,298500
+Fukushima,Layanan Gabungan,Benefit,775500,280700
+Fukushima,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,334475,239325
+Fukushima,Layanan Ilmiah/Akademik dan Profesional,Benefit,986925,319200
+Fukushima,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,347525,249225
+Fukushima,Layanan Pendidikan dan Pembelajaran,Benefit,879425,316775
+Fukushima,Manufaktur,Benefit,824675,266550
+Fukushima,"Pemasokan Listrik, Gas, dan Air",Benefit,1038975,368300
+Fukushima,Perdagangan Besar dan Eceran,Benefit,592800,258425
+Fukushima,Perhotelan dan Restoran (Hospitality),Benefit,230675,222275
+Fukushima,Pertambangan dan Penggalian,Benefit,1102050,287425
+Fukushima,Real Estat dan Penyewaan Barang,Benefit,771875,277425
+Fukushima,Transportasi dan Pos,Benefit,485875,264575
+Gifu,Informasi dan Komunikasi,Benefit,1331225,325825
+Gifu,Kesehatan dan Kesejahteraan Sosial,Benefit,819825,293875
+Gifu,Keuangan dan Asuransi,Benefit,1325450,333725
+Gifu,Konstruksi,Benefit,925875,332550
+Gifu,Layanan Gabungan,Benefit,1087625,294675
+Gifu,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,358300,259825
+Gifu,Layanan Ilmiah/Akademik dan Profesional,Benefit,1154875,332400
+Gifu,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,439225,258950
+Gifu,Layanan Pendidikan dan Pembelajaran,Benefit,1111500,353100
+Gifu,Manufaktur,Benefit,943000,286700
+Gifu,"Pemasokan Listrik, Gas, dan Air",Benefit,1431950,373150
+Gifu,Perdagangan Besar dan Eceran,Benefit,677675,272875
+Gifu,Perhotelan dan Restoran (Hospitality),Benefit,292350,247850
+Gifu,Pertambangan dan Penggalian,Benefit,600775,274800
+Gifu,Real Estat dan Penyewaan Barang,Benefit,854875,287650
+Gifu,Transportasi dan Pos,Benefit,576550,283625
+Gunma,Informasi dan Komunikasi,Benefit,1090925,312250
+Gunma,Kesehatan dan Kesejahteraan Sosial,Benefit,758950,286225
+Gunma,Keuangan dan Asuransi,Benefit,1200375,332700
+Gunma,Konstruksi,Benefit,955450,314675
+Gunma,Layanan Gabungan,Benefit,879875,281875
+Gunma,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,357225,258500
+Gunma,Layanan Ilmiah/Akademik dan Profesional,Benefit,1350475,340600
+Gunma,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,323175,240975
+Gunma,Layanan Pendidikan dan Pembelajaran,Benefit,1055625,330625
+Gunma,Manufaktur,Benefit,973700,292675
+Gunma,"Pemasokan Listrik, Gas, dan Air",Benefit,423300,449725
+Gunma,Perdagangan Besar dan Eceran,Benefit,769450,282400
+Gunma,Perhotelan dan Restoran (Hospitality),Benefit,257600,244100
+Gunma,Pertambangan dan Penggalian,Benefit,427075,268400
+Gunma,Real Estat dan Penyewaan Barang,Benefit,740400,281725
+Gunma,Transportasi dan Pos,Benefit,452050,265300
+Hiroshima,Informasi dan Komunikasi,Benefit,1307350,346625
+Hiroshima,Kesehatan dan Kesejahteraan Sosial,Benefit,813350,284575
+Hiroshima,Keuangan dan Asuransi,Benefit,1232900,340025
+Hiroshima,Konstruksi,Benefit,1186525,336000
+Hiroshima,Layanan Gabungan,Benefit,990175,305950
+Hiroshima,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,439350,263925
+Hiroshima,Layanan Ilmiah/Akademik dan Profesional,Benefit,1230125,331825
+Hiroshima,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,534275,257600
+Hiroshima,Layanan Pendidikan dan Pembelajaran,Benefit,1189075,359050
+Hiroshima,Manufaktur,Benefit,939350,289700
+Hiroshima,"Pemasokan Listrik, Gas, dan Air",Benefit,1491125,411050
+Hiroshima,Perdagangan Besar dan Eceran,Benefit,831925,299050
+Hiroshima,Perhotelan dan Restoran (Hospitality),Benefit,217025,237675
+Hiroshima,Pertambangan dan Penggalian,Benefit,278950,268950
+Hiroshima,Real Estat dan Penyewaan Barang,Benefit,887400,303750
+Hiroshima,Transportasi dan Pos,Benefit,566700,264875
+Hokkaido,Informasi dan Komunikasi,Benefit,1092550,336600
+Hokkaido,Kesehatan dan Kesejahteraan Sosial,Benefit,689925,281650
+Hokkaido,Keuangan dan Asuransi,Benefit,1129225,332075
+Hokkaido,Konstruksi,Benefit,756275,302975
+Hokkaido,Layanan Gabungan,Benefit,1098150,284775
+Hokkaido,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,340925,244100
+Hokkaido,Layanan Ilmiah/Akademik dan Profesional,Benefit,1133550,331825
+Hokkaido,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,430750,237750
+Hokkaido,Layanan Pendidikan dan Pembelajaran,Benefit,1065150,345325
+Hokkaido,Manufaktur,Benefit,720500,254000
+Hokkaido,"Pemasokan Listrik, Gas, dan Air",Benefit,1302575,353325
+Hokkaido,Perdagangan Besar dan Eceran,Benefit,801975,273325
+Hokkaido,Perhotelan dan Restoran (Hospitality),Benefit,214050,218375
+Hokkaido,Pertambangan dan Penggalian,Benefit,757425,305200
+Hokkaido,Real Estat dan Penyewaan Barang,Benefit,712275,282225
+Hokkaido,Transportasi dan Pos,Benefit,548725,252725
+Hyogo,Informasi dan Komunikasi,Benefit,1392325,356125
+Hyogo,Kesehatan dan Kesejahteraan Sosial,Benefit,745825,297450
+Hyogo,Keuangan dan Asuransi,Benefit,1185550,344075
+Hyogo,Konstruksi,Benefit,1078075,343600
+Hyogo,Layanan Gabungan,Benefit,1023300,293875
+Hyogo,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,357975,268425
+Hyogo,Layanan Ilmiah/Akademik dan Profesional,Benefit,1372625,365825
+Hyogo,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,599675,271700
+Hyogo,Layanan Pendidikan dan Pembelajaran,Benefit,1346150,387650
+Hyogo,Manufaktur,Benefit,1123500,315875
+Hyogo,"Pemasokan Listrik, Gas, dan Air",Benefit,1419200,352900
+Hyogo,Perdagangan Besar dan Eceran,Benefit,867675,308050
+Hyogo,Perhotelan dan Restoran (Hospitality),Benefit,336375,259600
+Hyogo,Pertambangan dan Penggalian,Benefit,867350,349075
+Hyogo,Real Estat dan Penyewaan Barang,Benefit,934725,295500
+Hyogo,Transportasi dan Pos,Benefit,755700,293050
+Ibaraki,Informasi dan Komunikasi,Benefit,924725,301375
+Ibaraki,Kesehatan dan Kesejahteraan Sosial,Benefit,698175,296925
+Ibaraki,Keuangan dan Asuransi,Benefit,1229300,349350
+Ibaraki,Konstruksi,Benefit,710425,336325
+Ibaraki,Layanan Gabungan,Benefit,895525,295675
+Ibaraki,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,575725,281100
+Ibaraki,Layanan Ilmiah/Akademik dan Profesional,Benefit,1649950,406575
+Ibaraki,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,529450,256600
+Ibaraki,Layanan Pendidikan dan Pembelajaran,Benefit,1033850,339175
+Ibaraki,Manufaktur,Benefit,1148300,306925
+Ibaraki,"Pemasokan Listrik, Gas, dan Air",Benefit,707225,417550
+Ibaraki,Perdagangan Besar dan Eceran,Benefit,677200,278250
+Ibaraki,Perhotelan dan Restoran (Hospitality),Benefit,318475,247650
+Ibaraki,Pertambangan dan Penggalian,Benefit,502867,297933
+Ibaraki,Real Estat dan Penyewaan Barang,Benefit,825425,297450
+Ibaraki,Transportasi dan Pos,Benefit,523975,276400
+Ishikawa,Informasi dan Komunikasi,Benefit,1293175,341850
+Ishikawa,Kesehatan dan Kesejahteraan Sosial,Benefit,788125,286950
+Ishikawa,Keuangan dan Asuransi,Benefit,1052250,330325
+Ishikawa,Konstruksi,Benefit,1002500,329575
+Ishikawa,Layanan Gabungan,Benefit,1028875,303650
+Ishikawa,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,421225,261825
+Ishikawa,Layanan Ilmiah/Akademik dan Profesional,Benefit,1021650,305050
+Ishikawa,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,443750,244875
+Ishikawa,Layanan Pendidikan dan Pembelajaran,Benefit,1141725,358025
+Ishikawa,Manufaktur,Benefit,855475,274150
+Ishikawa,"Pemasokan Listrik, Gas, dan Air",Benefit,1303300,397300
+Ishikawa,Perdagangan Besar dan Eceran,Benefit,823550,281825
+Ishikawa,Perhotelan dan Restoran (Hospitality),Benefit,296475,243525
+Ishikawa,Pertambangan dan Penggalian,Benefit,918800,351300
+Ishikawa,Real Estat dan Penyewaan Barang,Benefit,745450,285275
+Ishikawa,Transportasi dan Pos,Benefit,606625,276500
+Iwate,Informasi dan Komunikasi,Benefit,1048625,314925
+Iwate,Kesehatan dan Kesejahteraan Sosial,Benefit,673800,253150
+Iwate,Keuangan dan Asuransi,Benefit,1149175,320575
+Iwate,Konstruksi,Benefit,742175,274100
+Iwate,Layanan Gabungan,Benefit,732175,274275
+Iwate,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,260150,232125
+Iwate,Layanan Ilmiah/Akademik dan Profesional,Benefit,935000,297000
+Iwate,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,417225,220575
+Iwate,Layanan Pendidikan dan Pembelajaran,Benefit,901050,308075
+Iwate,Manufaktur,Benefit,679175,241200
+Iwate,"Pemasokan Listrik, Gas, dan Air",Benefit,1158725,313875
+Iwate,Perdagangan Besar dan Eceran,Benefit,570200,245175
+Iwate,Perhotelan dan Restoran (Hospitality),Benefit,225650,211275
+Iwate,Pertambangan dan Penggalian,Benefit,618475,247025
+Iwate,Real Estat dan Penyewaan Barang,Benefit,689175,260225
+Iwate,Transportasi dan Pos,Benefit,513425,244000
+Kagawa,Informasi dan Komunikasi,Benefit,1183675,358625
+Kagawa,Kesehatan dan Kesejahteraan Sosial,Benefit,718575,277925
+Kagawa,Keuangan dan Asuransi,Benefit,1227750,354475
+Kagawa,Konstruksi,Benefit,930475,334575
+Kagawa,Layanan Gabungan,Benefit,922075,283625
+Kagawa,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,443675,254850
+Kagawa,Layanan Ilmiah/Akademik dan Profesional,Benefit,1468450,337525
+Kagawa,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,441525,243075
+Kagawa,Layanan Pendidikan dan Pembelajaran,Benefit,986100,320850
+Kagawa,Manufaktur,Benefit,787725,266150
+Kagawa,"Pemasokan Listrik, Gas, dan Air",Benefit,1473500,395775
+Kagawa,Perdagangan Besar dan Eceran,Benefit,765375,281700
+Kagawa,Perhotelan dan Restoran (Hospitality),Benefit,354475,246275
+Kagawa,Pertambangan dan Penggalian,Benefit,326875,287325
+Kagawa,Real Estat dan Penyewaan Barang,Benefit,775725,298375
+Kagawa,Transportasi dan Pos,Benefit,529500,254875
+Kagoshima,Informasi dan Komunikasi,Benefit,1011675,326650
+Kagoshima,Kesehatan dan Kesejahteraan Sosial,Benefit,620550,260650
+Kagoshima,Keuangan dan Asuransi,Benefit,1100575,322575
+Kagoshima,Konstruksi,Benefit,643925,274025
+Kagoshima,Layanan Gabungan,Benefit,775850,261275
+Kagoshima,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,365850,234125
+Kagoshima,Layanan Ilmiah/Akademik dan Profesional,Benefit,979275,310775
+Kagoshima,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,464125,223425
+Kagoshima,Layanan Pendidikan dan Pembelajaran,Benefit,937875,310800
+Kagoshima,Manufaktur,Benefit,709950,240975
+Kagoshima,"Pemasokan Listrik, Gas, dan Air",Benefit,1556300,402550
+Kagoshima,Perdagangan Besar dan Eceran,Benefit,695175,268025
+Kagoshima,Perhotelan dan Restoran (Hospitality),Benefit,263750,213900
+Kagoshima,Pertambangan dan Penggalian,Benefit,1327475,313625
+Kagoshima,Real Estat dan Penyewaan Barang,Benefit,678125,259275
+Kagoshima,Transportasi dan Pos,Benefit,534150,247925
+Kanagawa,Informasi dan Komunikasi,Benefit,1479000,380550
+Kanagawa,Kesehatan dan Kesejahteraan Sosial,Benefit,690625,315325
+Kanagawa,Keuangan dan Asuransi,Benefit,1304625,364400
+Kanagawa,Konstruksi,Benefit,1171500,361125
+Kanagawa,Layanan Gabungan,Benefit,1208500,322300
+Kanagawa,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,437275,288700
+Kanagawa,Layanan Ilmiah/Akademik dan Profesional,Benefit,1664300,433200
+Kanagawa,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,648125,294150
+Kanagawa,Layanan Pendidikan dan Pembelajaran,Benefit,1361150,399675
+Kanagawa,Manufaktur,Benefit,1296200,360375
+Kanagawa,"Pemasokan Listrik, Gas, dan Air",Benefit,737125,456450
+Kanagawa,Perdagangan Besar dan Eceran,Benefit,936300,330075
+Kanagawa,Perhotelan dan Restoran (Hospitality),Benefit,358800,278275
+Kanagawa,Pertambangan dan Penggalian,Benefit,1093650,329425
+Kanagawa,Real Estat dan Penyewaan Barang,Benefit,1261900,335075
+Kanagawa,Transportasi dan Pos,Benefit,669625,295075
+Kochi,Informasi dan Komunikasi,Benefit,1088375,324475
+Kochi,Kesehatan dan Kesejahteraan Sosial,Benefit,675025,271175
+Kochi,Keuangan dan Asuransi,Benefit,982100,325275
+Kochi,Konstruksi,Benefit,839150,284075
+Kochi,Layanan Gabungan,Benefit,852825,285975
+Kochi,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,359800,253050
+Kochi,Layanan Ilmiah/Akademik dan Profesional,Benefit,877550,283325
+Kochi,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,373800,221900
+Kochi,Layanan Pendidikan dan Pembelajaran,Benefit,1149675,343550
+Kochi,Manufaktur,Benefit,607050,245200
+Kochi,"Pemasokan Listrik, Gas, dan Air",Benefit,1453100,406550
+Kochi,Perdagangan Besar dan Eceran,Benefit,627875,251000
+Kochi,Perhotelan dan Restoran (Hospitality),Benefit,184875,208325
+Kochi,Pertambangan dan Penggalian,Benefit,1428175,321650
+Kochi,Real Estat dan Penyewaan Barang,Benefit,577025,230850
+Kochi,Transportasi dan Pos,Benefit,561875,248475
+Kumamoto,Informasi dan Komunikasi,Benefit,804575,294675
+Kumamoto,Kesehatan dan Kesejahteraan Sosial,Benefit,643475,263825
+Kumamoto,Keuangan dan Asuransi,Benefit,1212200,334550
+Kumamoto,Konstruksi,Benefit,783450,293125
+Kumamoto,Layanan Gabungan,Benefit,919300,276050
+Kumamoto,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,365350,245825
+Kumamoto,Layanan Ilmiah/Akademik dan Profesional,Benefit,1007900,302200
+Kumamoto,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,318200,219600
+Kumamoto,Layanan Pendidikan dan Pembelajaran,Benefit,1022800,321475
+Kumamoto,Manufaktur,Benefit,976050,270975
+Kumamoto,"Pemasokan Listrik, Gas, dan Air",Benefit,1385475,374100
+Kumamoto,Perdagangan Besar dan Eceran,Benefit,629825,259425
+Kumamoto,Perhotelan dan Restoran (Hospitality),Benefit,197475,218675
+Kumamoto,Pertambangan dan Penggalian,Benefit,549875,248350
+Kumamoto,Real Estat dan Penyewaan Barang,Benefit,604675,255050
+Kumamoto,Transportasi dan Pos,Benefit,419650,239150
+Kyoto,Informasi dan Komunikasi,Benefit,1047050,353100
+Kyoto,Kesehatan dan Kesejahteraan Sosial,Benefit,735150,306425
+Kyoto,Keuangan dan Asuransi,Benefit,1367825,354225
+Kyoto,Konstruksi,Benefit,822350,325700
+Kyoto,Layanan Gabungan,Benefit,929750,302175
+Kyoto,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,426125,272900
+Kyoto,Layanan Ilmiah/Akademik dan Profesional,Benefit,1261500,371450
+Kyoto,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,468850,259725
+Kyoto,Layanan Pendidikan dan Pembelajaran,Benefit,1520850,407100
+Kyoto,Manufaktur,Benefit,1120000,324225
+Kyoto,"Pemasokan Listrik, Gas, dan Air",Benefit,1529600,357025
+Kyoto,Perdagangan Besar dan Eceran,Benefit,761825,302400
+Kyoto,Perhotelan dan Restoran (Hospitality),Benefit,367450,266625
+Kyoto,Pertambangan dan Penggalian,Benefit,907125,311250
+Kyoto,Real Estat dan Penyewaan Barang,Benefit,829325,325400
+Kyoto,Transportasi dan Pos,Benefit,486325,264900
+Mie,Informasi dan Komunikasi,Benefit,962600,317975
+Mie,Kesehatan dan Kesejahteraan Sosial,Benefit,683000,291450
+Mie,Keuangan dan Asuransi,Benefit,1341975,348200
+Mie,Konstruksi,Benefit,880600,333975
+Mie,Layanan Gabungan,Benefit,958425,283300
+Mie,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,384725,264975
+Mie,Layanan Ilmiah/Akademik dan Profesional,Benefit,1091725,329900
+Mie,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,534400,258350
+Mie,Layanan Pendidikan dan Pembelajaran,Benefit,1124525,349850
+Mie,Manufaktur,Benefit,1065275,311225
+Mie,"Pemasokan Listrik, Gas, dan Air",Benefit,1460600,373625
+Mie,Perdagangan Besar dan Eceran,Benefit,699325,278000
+Mie,Perhotelan dan Restoran (Hospitality),Benefit,282675,243175
+Mie,Pertambangan dan Penggalian,Benefit,741625,291325
+Mie,Real Estat dan Penyewaan Barang,Benefit,662700,277450
+Mie,Transportasi dan Pos,Benefit,603250,289400
+Miyagi,Informasi dan Komunikasi,Benefit,1290575,333100
+Miyagi,Kesehatan dan Kesejahteraan Sosial,Benefit,724950,277800
+Miyagi,Keuangan dan Asuransi,Benefit,1203825,359425
+Miyagi,Konstruksi,Benefit,852200,317625
+Miyagi,Layanan Gabungan,Benefit,842025,289050
+Miyagi,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,312125,242475
+Miyagi,Layanan Ilmiah/Akademik dan Profesional,Benefit,1107775,345075
+Miyagi,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,401500,240025
+Miyagi,Layanan Pendidikan dan Pembelajaran,Benefit,1083125,364725
+Miyagi,Manufaktur,Benefit,815425,262075
+Miyagi,"Pemasokan Listrik, Gas, dan Air",Benefit,1384225,374325
+Miyagi,Perdagangan Besar dan Eceran,Benefit,832375,289200
+Miyagi,Perhotelan dan Restoran (Hospitality),Benefit,277050,236325
+Miyagi,Pertambangan dan Penggalian,Benefit,788700,281175
+Miyagi,Real Estat dan Penyewaan Barang,Benefit,953550,295150
+Miyagi,Transportasi dan Pos,Benefit,489925,257250
+Miyazaki,Informasi dan Komunikasi,Benefit,911050,295125
+Miyazaki,Kesehatan dan Kesejahteraan Sosial,Benefit,591750,250150
+Miyazaki,Keuangan dan Asuransi,Benefit,1044675,320600
+Miyazaki,Konstruksi,Benefit,755400,278050
+Miyazaki,Layanan Gabungan,Benefit,870600,255675
+Miyazaki,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,363600,233900
+Miyazaki,Layanan Ilmiah/Akademik dan Profesional,Benefit,966075,287575
+Miyazaki,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,463650,220625
+Miyazaki,Layanan Pendidikan dan Pembelajaran,Benefit,823000,297250
+Miyazaki,Manufaktur,Benefit,692350,234100
+Miyazaki,"Pemasokan Listrik, Gas, dan Air",Benefit,1568775,385575
+Miyazaki,Perdagangan Besar dan Eceran,Benefit,525450,242250
+Miyazaki,Perhotelan dan Restoran (Hospitality),Benefit,186400,212225
+Miyazaki,Pertambangan dan Penggalian,Benefit,475775,241825
+Miyazaki,Real Estat dan Penyewaan Barang,Benefit,690825,252900
+Miyazaki,Transportasi dan Pos,Benefit,409700,244175
+Nagano,Informasi dan Komunikasi,Benefit,1249625,335550
+Nagano,Kesehatan dan Kesejahteraan Sosial,Benefit,687875,293325
+Nagano,Keuangan dan Asuransi,Benefit,1246450,346900
+Nagano,Konstruksi,Benefit,803575,322050
+Nagano,Layanan Gabungan,Benefit,975850,298850
+Nagano,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,391225,259750
+Nagano,Layanan Ilmiah/Akademik dan Profesional,Benefit,1187850,328050
+Nagano,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,439925,241300
+Nagano,Layanan Pendidikan dan Pembelajaran,Benefit,1020550,335550
+Nagano,Manufaktur,Benefit,938800,282625
+Nagano,"Pemasokan Listrik, Gas, dan Air",Benefit,1360825,394725
+Nagano,Perdagangan Besar dan Eceran,Benefit,731825,266400
+Nagano,Perhotelan dan Restoran (Hospitality),Benefit,234800,246225
+Nagano,Pertambangan dan Penggalian,Benefit,392975,280000
+Nagano,Real Estat dan Penyewaan Barang,Benefit,750950,280475
+Nagano,Transportasi dan Pos,Benefit,609325,272375
+Nagasaki,Informasi dan Komunikasi,Benefit,953125,301175
+Nagasaki,Kesehatan dan Kesejahteraan Sosial,Benefit,640125,262300
+Nagasaki,Keuangan dan Asuransi,Benefit,981475,320850
+Nagasaki,Konstruksi,Benefit,732475,273600
+Nagasaki,Layanan Gabungan,Benefit,770775,263525
+Nagasaki,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,319875,236325
+Nagasaki,Layanan Ilmiah/Akademik dan Profesional,Benefit,1265100,323425
+Nagasaki,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,434125,225550
+Nagasaki,Layanan Pendidikan dan Pembelajaran,Benefit,954700,320225
+Nagasaki,Manufaktur,Benefit,779425,256425
+Nagasaki,"Pemasokan Listrik, Gas, dan Air",Benefit,1366850,380075
+Nagasaki,Perdagangan Besar dan Eceran,Benefit,589850,248600
+Nagasaki,Perhotelan dan Restoran (Hospitality),Benefit,183050,210600
+Nagasaki,Pertambangan dan Penggalian,Benefit,539550,260350
+Nagasaki,Real Estat dan Penyewaan Barang,Benefit,605025,258150
+Nagasaki,Transportasi dan Pos,Benefit,463725,235950
+Nara,Informasi dan Komunikasi,Benefit,946750,339725
+Nara,Kesehatan dan Kesejahteraan Sosial,Benefit,686250,305425
+Nara,Keuangan dan Asuransi,Benefit,1310075,340925
+Nara,Konstruksi,Benefit,912100,373875
+Nara,Layanan Gabungan,Benefit,1038250,300975
+Nara,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,407300,249975
+Nara,Layanan Ilmiah/Akademik dan Profesional,Benefit,989300,326500
+Nara,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,489525,250125
+Nara,Layanan Pendidikan dan Pembelajaran,Benefit,1244725,386500
+Nara,Manufaktur,Benefit,804250,289350
+Nara,"Pemasokan Listrik, Gas, dan Air",Benefit,1518125,376975
+Nara,Perdagangan Besar dan Eceran,Benefit,704350,280650
+Nara,Perhotelan dan Restoran (Hospitality),Benefit,304175,245125
+Nara,Pertambangan dan Penggalian,Benefit,568500,378400
+Nara,Real Estat dan Penyewaan Barang,Benefit,948300,300925
+Nara,Transportasi dan Pos,Benefit,586775,286700
+Niigata,Informasi dan Komunikasi,Benefit,956025,306850
+Niigata,Kesehatan dan Kesejahteraan Sosial,Benefit,729700,282800
+Niigata,Keuangan dan Asuransi,Benefit,1146750,324225
+Niigata,Konstruksi,Benefit,773675,291975
+Niigata,Layanan Gabungan,Benefit,795475,284375
+Niigata,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,345500,242950
+Niigata,Layanan Ilmiah/Akademik dan Profesional,Benefit,1075350,312950
+Niigata,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,402200,227975
+Niigata,Layanan Pendidikan dan Pembelajaran,Benefit,1028625,328575
+Niigata,Manufaktur,Benefit,743525,258400
+Niigata,"Pemasokan Listrik, Gas, dan Air",Benefit,858800,411275
+Niigata,Perdagangan Besar dan Eceran,Benefit,615250,255700
+Niigata,Perhotelan dan Restoran (Hospitality),Benefit,289875,232400
+Niigata,Pertambangan dan Penggalian,Benefit,1603600,361550
+Niigata,Real Estat dan Penyewaan Barang,Benefit,765600,269725
+Niigata,Transportasi dan Pos,Benefit,504025,257925
+Oita,Informasi dan Komunikasi,Benefit,1033825,318850
+Oita,Kesehatan dan Kesejahteraan Sosial,Benefit,655600,269575
+Oita,Keuangan dan Asuransi,Benefit,1045450,325925
+Oita,Konstruksi,Benefit,917975,291625
+Oita,Layanan Gabungan,Benefit,762475,278125
+Oita,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,340325,243225
+Oita,Layanan Ilmiah/Akademik dan Profesional,Benefit,1157150,299275
+Oita,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,417150,225225
+Oita,Layanan Pendidikan dan Pembelajaran,Benefit,1075575,316675
+Oita,Manufaktur,Benefit,853625,261600
+Oita,"Pemasokan Listrik, Gas, dan Air",Benefit,1524925,395350
+Oita,Perdagangan Besar dan Eceran,Benefit,618050,249200
+Oita,Perhotelan dan Restoran (Hospitality),Benefit,213400,226750
+Oita,Pertambangan dan Penggalian,Benefit,1121525,305475
+Oita,Real Estat dan Penyewaan Barang,Benefit,665825,258374
+Oita,Transportasi dan Pos,Benefit,536475,252450
+Okayama,Informasi dan Komunikasi,Benefit,1153000,313100
+Okayama,Kesehatan dan Kesejahteraan Sosial,Benefit,721125,278675
+Okayama,Keuangan dan Asuransi,Benefit,1209525,337625
+Okayama,Konstruksi,Benefit,985650,319900
+Okayama,Layanan Gabungan,Benefit,983425,295250
+Okayama,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,335375,247500
+Okayama,Layanan Ilmiah/Akademik dan Profesional,Benefit,1215475,317325
+Okayama,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,607625,253575
+Okayama,Layanan Pendidikan dan Pembelajaran,Benefit,1209925,378275
+Okayama,Manufaktur,Benefit,864175,278025
+Okayama,"Pemasokan Listrik, Gas, dan Air",Benefit,1340175,385900
+Okayama,Perdagangan Besar dan Eceran,Benefit,653250,275675
+Okayama,Perhotelan dan Restoran (Hospitality),Benefit,227575,229700
+Okayama,Pertambangan dan Penggalian,Benefit,769325,301850
+Okayama,Real Estat dan Penyewaan Barang,Benefit,837925,276850
+Okayama,Transportasi dan Pos,Benefit,524900,260625
+Okinawa,Informasi dan Komunikasi,Benefit,530375,266750
+Okinawa,Kesehatan dan Kesejahteraan Sosial,Benefit,523925,267400
+Okinawa,Keuangan dan Asuransi,Benefit,927300,323175
+Okinawa,Konstruksi,Benefit,526150,279775
+Okinawa,Layanan Gabungan,Benefit,814175,278200
+Okinawa,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,256600,224450
+Okinawa,Layanan Ilmiah/Akademik dan Profesional,Benefit,538450,280825
+Okinawa,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,263800,211300
+Okinawa,Layanan Pendidikan dan Pembelajaran,Benefit,859575,325625
+Okinawa,Manufaktur,Benefit,419800,227000
+Okinawa,"Pemasokan Listrik, Gas, dan Air",Benefit,1568175,427675
+Okinawa,Perdagangan Besar dan Eceran,Benefit,543650,240375
+Okinawa,Perhotelan dan Restoran (Hospitality),Benefit,185825,216525
+Okinawa,Pertambangan dan Penggalian,Benefit,379200,247900
+Okinawa,Real Estat dan Penyewaan Barang,Benefit,564275,262125
+Okinawa,Transportasi dan Pos,Benefit,414300,238900
+Osaka,Informasi dan Komunikasi,Benefit,1148500,373275
+Osaka,Kesehatan dan Kesejahteraan Sosial,Benefit,710175,319700
+Osaka,Keuangan dan Asuransi,Benefit,1453125,386950
+Osaka,Konstruksi,Benefit,1334850,380700
+Osaka,Layanan Gabungan,Benefit,1163250,336100
+Osaka,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,425275,284350
+Osaka,Layanan Ilmiah/Akademik dan Profesional,Benefit,1294925,367025
+Osaka,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,555800,277550
+Osaka,Layanan Pendidikan dan Pembelajaran,Benefit,1231250,395125
+Osaka,Manufaktur,Benefit,1071350,324475
+Osaka,"Pemasokan Listrik, Gas, dan Air",Benefit,1747525,375475
+Osaka,Perdagangan Besar dan Eceran,Benefit,1047600,332725
+Osaka,Perhotelan dan Restoran (Hospitality),Benefit,390275,285975
+Osaka,Pertambangan dan Penggalian,Benefit,184267,332400
+Osaka,Real Estat dan Penyewaan Barang,Benefit,1165050,348775
+Osaka,Transportasi dan Pos,Benefit,701425,301625
+Saga,Informasi dan Komunikasi,Benefit,1209950,295625
+Saga,Kesehatan dan Kesejahteraan Sosial,Benefit,650500,269425
+Saga,Keuangan dan Asuransi,Benefit,979050,310900
+Saga,Konstruksi,Benefit,716825,269275
+Saga,Layanan Gabungan,Benefit,917325,284375
+Saga,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,348100,238525
+Saga,Layanan Ilmiah/Akademik dan Profesional,Benefit,945525,283100
+Saga,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,461300,223475
+Saga,Layanan Pendidikan dan Pembelajaran,Benefit,930375,302375
+Saga,Manufaktur,Benefit,841875,257250
+Saga,"Pemasokan Listrik, Gas, dan Air",Benefit,1495850,381775
+Saga,Perdagangan Besar dan Eceran,Benefit,646000,253025
+Saga,Perhotelan dan Restoran (Hospitality),Benefit,262025,214300
+Saga,Pertambangan dan Penggalian,Benefit,502975,266650
+Saga,Real Estat dan Penyewaan Barang,Benefit,644450,252225
+Saga,Transportasi dan Pos,Benefit,395675,245375
+Saitama,Informasi dan Komunikasi,Benefit,1172475,341750
+Saitama,Kesehatan dan Kesejahteraan Sosial,Benefit,711025,313700
+Saitama,Keuangan dan Asuransi,Benefit,1280600,342000
+Saitama,Konstruksi,Benefit,794625,348375
+Saitama,Layanan Gabungan,Benefit,1007200,300925
+Saitama,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,364450,273975
+Saitama,Layanan Ilmiah/Akademik dan Profesional,Benefit,1223875,370575
+Saitama,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,482725,269400
+Saitama,Layanan Pendidikan dan Pembelajaran,Benefit,1182250,354825
+Saitama,Manufaktur,Benefit,876325,304250
+Saitama,"Pemasokan Listrik, Gas, dan Air",Benefit,762200,423725
+Saitama,Perdagangan Besar dan Eceran,Benefit,884725,307925
+Saitama,Perhotelan dan Restoran (Hospitality),Benefit,328150,253425
+Saitama,Pertambangan dan Penggalian,Benefit,928025,301325
+Saitama,Real Estat dan Penyewaan Barang,Benefit,975725,320225
+Saitama,Transportasi dan Pos,Benefit,472225,280275
+Shiga,Informasi dan Komunikasi,Benefit,958225,350825
+Shiga,Kesehatan dan Kesejahteraan Sosial,Benefit,797975,297000
+Shiga,Keuangan dan Asuransi,Benefit,1338075,330375
+Shiga,Konstruksi,Benefit,899775,322400
+Shiga,Layanan Gabungan,Benefit,960800,301100
+Shiga,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,553875,300925
+Shiga,Layanan Ilmiah/Akademik dan Profesional,Benefit,1415875,343675
+Shiga,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,429800,251450
+Shiga,Layanan Pendidikan dan Pembelajaran,Benefit,1354875,399200
+Shiga,Manufaktur,Benefit,1095300,306925
+Shiga,"Pemasokan Listrik, Gas, dan Air",Benefit,1474175,364150
+Shiga,Perdagangan Besar dan Eceran,Benefit,769075,280250
+Shiga,Perhotelan dan Restoran (Hospitality),Benefit,340000,249675
+Shiga,Pertambangan dan Penggalian,Benefit,641050,257850
+Shiga,Real Estat dan Penyewaan Barang,Benefit,851875,317975
+Shiga,Transportasi dan Pos,Benefit,493375,277250
+Shimane,Informasi dan Komunikasi,Benefit,935225,282450
+Shimane,Kesehatan dan Kesejahteraan Sosial,Benefit,726375,263375
+Shimane,Keuangan dan Asuransi,Benefit,1192500,311425
+Shimane,Konstruksi,Benefit,713825,287750
+Shimane,Layanan Gabungan,Benefit,893500,288600
+Shimane,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,328075,239200
+Shimane,Layanan Ilmiah/Akademik dan Profesional,Benefit,931550,302525
+Shimane,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,428600,230550
+Shimane,Layanan Pendidikan dan Pembelajaran,Benefit,1014025,329650
+Shimane,Manufaktur,Benefit,726750,251900
+Shimane,"Pemasokan Listrik, Gas, dan Air",Benefit,1384825,403300
+Shimane,Perdagangan Besar dan Eceran,Benefit,636450,249225
+Shimane,Perhotelan dan Restoran (Hospitality),Benefit,177850,213575
+Shimane,Pertambangan dan Penggalian,Benefit,452650,249925
+Shimane,Real Estat dan Penyewaan Barang,Benefit,585575,245725
+Shimane,Transportasi dan Pos,Benefit,411875,245975
+Shizuoka,Informasi dan Komunikasi,Benefit,1217525,340150
+Shizuoka,Kesehatan dan Kesejahteraan Sosial,Benefit,730875,292225
+Shizuoka,Keuangan dan Asuransi,Benefit,1332500,337825
+Shizuoka,Konstruksi,Benefit,938950,310675
+Shizuoka,Layanan Gabungan,Benefit,1099850,297475
+Shizuoka,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,431075,265475
+Shizuoka,Layanan Ilmiah/Akademik dan Profesional,Benefit,1705250,367125
+Shizuoka,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,391250,246250
+Shizuoka,Layanan Pendidikan dan Pembelajaran,Benefit,1027275,329300
+Shizuoka,Manufaktur,Benefit,1098150,302800
+Shizuoka,"Pemasokan Listrik, Gas, dan Air",Benefit,1451550,421425
+Shizuoka,Perdagangan Besar dan Eceran,Benefit,744725,280775
+Shizuoka,Perhotelan dan Restoran (Hospitality),Benefit,257450,242650
+Shizuoka,Pertambangan dan Penggalian,Benefit,494650,287925
+Shizuoka,Real Estat dan Penyewaan Barang,Benefit,830675,283700
+Shizuoka,Transportasi dan Pos,Benefit,603525,265925
+Tochigi,Informasi dan Komunikasi,Benefit,1365025,346850
+Tochigi,Kesehatan dan Kesejahteraan Sosial,Benefit,738650,292525
+Tochigi,Keuangan dan Asuransi,Benefit,1211100,347675
+Tochigi,Konstruksi,Benefit,769875,331225
+Tochigi,Layanan Gabungan,Benefit,897650,285075
+Tochigi,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,268875,255250
+Tochigi,Layanan Ilmiah/Akademik dan Profesional,Benefit,1441125,351150
+Tochigi,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,753500,291800
+Tochigi,Layanan Pendidikan dan Pembelajaran,Benefit,937875,320550
+Tochigi,Manufaktur,Benefit,1066700,302525
+Tochigi,"Pemasokan Listrik, Gas, dan Air",Benefit,303450,475275
+Tochigi,Perdagangan Besar dan Eceran,Benefit,719550,277625
+Tochigi,Perhotelan dan Restoran (Hospitality),Benefit,217675,239225
+Tochigi,Pertambangan dan Penggalian,Benefit,788050,302875
+Tochigi,Real Estat dan Penyewaan Barang,Benefit,668350,279125
+Tochigi,Transportasi dan Pos,Benefit,455475,274250
+Tokushima,Informasi dan Komunikasi,Benefit,1205800,347050
+Tokushima,Kesehatan dan Kesejahteraan Sosial,Benefit,627650,264600
+Tokushima,Keuangan dan Asuransi,Benefit,1139150,345950
+Tokushima,Konstruksi,Benefit,825900,309150
+Tokushima,Layanan Gabungan,Benefit,891675,266925
+Tokushima,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,330250,249575
+Tokushima,Layanan Ilmiah/Akademik dan Profesional,Benefit,1264000,321575
+Tokushima,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,301150,214025
+Tokushima,Layanan Pendidikan dan Pembelajaran,Benefit,1081025,362325
+Tokushima,Manufaktur,Benefit,1067050,276450
+Tokushima,"Pemasokan Listrik, Gas, dan Air",Benefit,1527475,415900
+Tokushima,Perdagangan Besar dan Eceran,Benefit,592075,252550
+Tokushima,Perhotelan dan Restoran (Hospitality),Benefit,279300,232425
+Tokushima,Pertambangan dan Penggalian,Benefit,623325,245925
+Tokushima,Real Estat dan Penyewaan Barang,Benefit,454325,257175
+Tokushima,Transportasi dan Pos,Benefit,419750,245800
+Tokyo,Informasi dan Komunikasi,Benefit,1253025,402375
+Tokyo,Kesehatan dan Kesejahteraan Sosial,Benefit,814125,329150
+Tokyo,Keuangan dan Asuransi,Benefit,1921775,459300
+Tokyo,Konstruksi,Benefit,1466900,397625
+Tokyo,Layanan Gabungan,Benefit,1383550,368150
+Tokyo,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,489200,307175
+Tokyo,Layanan Ilmiah/Akademik dan Profesional,Benefit,1429075,442450
+Tokyo,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,674650,305825
+Tokyo,Layanan Pendidikan dan Pembelajaran,Benefit,1544700,436050
+Tokyo,Manufaktur,Benefit,1247900,363775
+Tokyo,"Pemasokan Listrik, Gas, dan Air",Benefit,1123525,478525
+Tokyo,Perdagangan Besar dan Eceran,Benefit,1142825,368700
+Tokyo,Perhotelan dan Restoran (Hospitality),Benefit,529450,302400
+Tokyo,Pertambangan dan Penggalian,Benefit,2872700,563050
+Tokyo,Real Estat dan Penyewaan Barang,Benefit,1432950,376325
+Tokyo,Transportasi dan Pos,Benefit,827100,334850
+Tottori,Informasi dan Komunikasi,Benefit,793675,285800
+Tottori,Kesehatan dan Kesejahteraan Sosial,Benefit,686425,267600
+Tottori,Keuangan dan Asuransi,Benefit,981125,307900
+Tottori,Konstruksi,Benefit,714250,284450
+Tottori,Layanan Gabungan,Benefit,580875,257300
+Tottori,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,309450,227375
+Tottori,Layanan Ilmiah/Akademik dan Profesional,Benefit,998275,298000
+Tottori,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,372825,226500
+Tottori,Layanan Pendidikan dan Pembelajaran,Benefit,953250,325375
+Tottori,Manufaktur,Benefit,587675,234975
+Tottori,"Pemasokan Listrik, Gas, dan Air",Benefit,1370600,396375
+Tottori,Perdagangan Besar dan Eceran,Benefit,572975,243250
+Tottori,Perhotelan dan Restoran (Hospitality),Benefit,188625,217850
+Tottori,Pertambangan dan Penggalian,Benefit,444000,211900
+Tottori,Real Estat dan Penyewaan Barang,Benefit,683300,266075
+Tottori,Transportasi dan Pos,Benefit,512425,258550
+Toyama,Informasi dan Komunikasi,Benefit,1175550,314900
+Toyama,Kesehatan dan Kesejahteraan Sosial,Benefit,779750,297250
+Toyama,Keuangan dan Asuransi,Benefit,1028675,329275
+Toyama,Konstruksi,Benefit,994275,321475
+Toyama,Layanan Gabungan,Benefit,814350,276650
+Toyama,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,456850,264325
+Toyama,Layanan Ilmiah/Akademik dan Profesional,Benefit,1017450,315725
+Toyama,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,535625,245775
+Toyama,Layanan Pendidikan dan Pembelajaran,Benefit,1043275,336700
+Toyama,Manufaktur,Benefit,874025,277875
+Toyama,"Pemasokan Listrik, Gas, dan Air",Benefit,1393900,414350
+Toyama,Perdagangan Besar dan Eceran,Benefit,664125,272075
+Toyama,Perhotelan dan Restoran (Hospitality),Benefit,288875,248750
+Toyama,Pertambangan dan Penggalian,Benefit,669500,303475
+Toyama,Real Estat dan Penyewaan Barang,Benefit,804950,267675
+Toyama,Transportasi dan Pos,Benefit,501350,259550
+Wakayama,Informasi dan Komunikasi,Benefit,803225,319925
+Wakayama,Kesehatan dan Kesejahteraan Sosial,Benefit,711550,288300
+Wakayama,Keuangan dan Asuransi,Benefit,1275650,331100
+Wakayama,Konstruksi,Benefit,887175,344475
+Wakayama,Layanan Gabungan,Benefit,1000100,284000
+Wakayama,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,301200,250000
+Wakayama,Layanan Ilmiah/Akademik dan Profesional,Benefit,1058525,316700
+Wakayama,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,491375,244200
+Wakayama,Layanan Pendidikan dan Pembelajaran,Benefit,1152125,338850
+Wakayama,Manufaktur,Benefit,893050,276850
+Wakayama,"Pemasokan Listrik, Gas, dan Air",Benefit,1429925,367275
+Wakayama,Perdagangan Besar dan Eceran,Benefit,734550,269000
+Wakayama,Perhotelan dan Restoran (Hospitality),Benefit,276475,231775
+Wakayama,Pertambangan dan Penggalian,Benefit,704425,317425
+Wakayama,Real Estat dan Penyewaan Barang,Benefit,671775,280700
+Wakayama,Transportasi dan Pos,Benefit,520725,290750
+Yamagata,Informasi dan Komunikasi,Benefit,938150,305625
+Yamagata,Kesehatan dan Kesejahteraan Sosial,Benefit,647725,257050
+Yamagata,Keuangan dan Asuransi,Benefit,934600,315200
+Yamagata,Konstruksi,Benefit,789675,281675
+Yamagata,Layanan Gabungan,Benefit,752375,268475
+Yamagata,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,299150,233350
+Yamagata,Layanan Ilmiah/Akademik dan Profesional,Benefit,949125,304250
+Yamagata,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,368525,221500
+Yamagata,Layanan Pendidikan dan Pembelajaran,Benefit,960350,307750
+Yamagata,Manufaktur,Benefit,716400,247725
+Yamagata,"Pemasokan Listrik, Gas, dan Air",Benefit,1017925,325100
+Yamagata,Perdagangan Besar dan Eceran,Benefit,565075,247125
+Yamagata,Perhotelan dan Restoran (Hospitality),Benefit,192800,210375
+Yamagata,Pertambangan dan Penggalian,Benefit,624975,284475
+Yamagata,Real Estat dan Penyewaan Barang,Benefit,692400,267575
+Yamagata,Transportasi dan Pos,Benefit,455425,248950
+Yamaguchi,Informasi dan Komunikasi,Benefit,1208050,333375
+Yamaguchi,Kesehatan dan Kesejahteraan Sosial,Benefit,779250,280650
+Yamaguchi,Keuangan dan Asuransi,Benefit,1057625,321800
+Yamaguchi,Konstruksi,Benefit,881825,297725
+Yamaguchi,Layanan Gabungan,Benefit,905650,286575
+Yamaguchi,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,383650,261250
+Yamaguchi,Layanan Ilmiah/Akademik dan Profesional,Benefit,1179425,309250
+Yamaguchi,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,635800,251350
+Yamaguchi,Layanan Pendidikan dan Pembelajaran,Benefit,1022875,330400
+Yamaguchi,Manufaktur,Benefit,1095025,297725
+Yamaguchi,"Pemasokan Listrik, Gas, dan Air",Benefit,1411600,408250
+Yamaguchi,Perdagangan Besar dan Eceran,Benefit,680350,266775
+Yamaguchi,Perhotelan dan Restoran (Hospitality),Benefit,220075,225475
+Yamaguchi,Pertambangan dan Penggalian,Benefit,966700,288525
+Yamaguchi,Real Estat dan Penyewaan Barang,Benefit,647125,262800
+Yamaguchi,Transportasi dan Pos,Benefit,597525,259625
+Yamanashi,Informasi dan Komunikasi,Benefit,1167700,324375
+Yamanashi,Kesehatan dan Kesejahteraan Sosial,Benefit,759300,283575
+Yamanashi,Keuangan dan Asuransi,Benefit,1040425,325100
+Yamanashi,Konstruksi,Benefit,856675,344050
+Yamanashi,Layanan Gabungan,Benefit,655925,272650
+Yamanashi,"Layanan Hidup, Hiburan, dan Rekreasi",Benefit,415650,259250
+Yamanashi,Layanan Ilmiah/Akademik dan Profesional,Benefit,1028125,319100
+Yamanashi,Layanan Lainnya yang Tidak Diklasifikasikan,Benefit,359700,237625
+Yamanashi,Layanan Pendidikan dan Pembelajaran,Benefit,952475,340525
+Yamanashi,Manufaktur,Benefit,1163675,296400
+Yamanashi,"Pemasokan Listrik, Gas, dan Air",Benefit,399575,430600
+Yamanashi,Perdagangan Besar dan Eceran,Benefit,500100,256800
+Yamanashi,Perhotelan dan Restoran (Hospitality),Benefit,235500,244325
+Yamanashi,Pertambangan dan Penggalian,Benefit,757825,304725
+Yamanashi,Real Estat dan Penyewaan Barang,Benefit,835750,282900
+Yamanashi,Transportasi dan Pos,Benefit,604475,273825

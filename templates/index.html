@@ -1,0 +1,313 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <style>
+    :root {
+      --primary-bg: #05060a;
+      --accent-pink: #ff2e93;
+      --accent-indigo: #6366f1;
+      --card-glass: rgba(13, 15, 24, 0.7);
+      --border-glass: rgba(255, 255, 255, 0.04);
+      --pink-glow: rgba(255, 46, 147, 0.03);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    
+    .miraizu-dashboard-wrapper {
+      background-color: var(--primary-bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      position: relative;
+      padding-top: 10px;
+      padding-bottom: 40px;
+    }
+    
+    .miraizu-dashboard-wrapper::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      max-width: 800px;
+      height: 600px;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(255, 46, 147, 0.08) 0%, rgba(99, 102, 241, 0.03) 50%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .miraizu-dashboard-wrapper .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-title .white {
+      color: #ffffff;
+    }
+    
+    .hero-title .gradient {
+      background: linear-gradient(135deg, var(--accent-pink) 30%, #ffbe98 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .glass-card {
+      background: var(--card-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-glass);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px -10px var(--pink-glow);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -5px rgba(255, 46, 147, 0.12);
+      border-color: rgba(255, 46, 147, 0.25);
+    }
+    
+    .badge-interactive {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-muted);
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      border: 1px solid var(--border-glass);
+      transition: all 0.3s ease;
+    }
+    
+    .badge-interactive:hover {
+      color: var(--text-main);
+      border-color: rgba(255, 46, 147, 0.3);
+      background: rgba(255, 46, 147, 0.02);
+    }
+    
+    .estat-link {
+      color: #22d3ee;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+    
+    .estat-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 15px rgba(34, 211, 238, 0.8);
+    }
+    
+    .workflow-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      background: rgba(255, 46, 147, 0.1);
+      color: var(--accent-pink);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      width: fit-content;
+      border: 1px solid rgba(255, 46, 147, 0.15);
+    }
+    
+    .methodology-box {
+      background: linear-gradient(180deg, rgba(255, 46, 147, 0.03) 0%, rgba(5, 6, 10, 0) 100%);
+      border-left: 3px solid var(--accent-pink) !important;
+    }
+    
+    .dot-pulse {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      animation: pulse-green 2s infinite;
+    }
+    
+    @keyframes pulse-green {
+      0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+    
+    .btn-spk {
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-indigo));
+      color: #ffffff;
+      border-radius: 50px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(255, 46, 147, 0.2);
+    }
+    
+    .btn-spk:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(255, 46, 147, 0.4);
+      color: #ffffff;
+      letter-spacing: 0.08em;
+    }
+    
+    .text-pink {
+      color: var(--accent-pink);
+    }
+
+    @media (max-width: 767.98px) {
+      .workflow-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 15px;
+        padding-left: 4px;
+        padding-right: 4px;
+        scrollbar-width: none;
+      }
+      .workflow-scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+      .workflow-card-wrapper {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+      }
+    }
+  </style>
+
+  <div class="miraizu-dashboard-wrapper">
+    <div class="container py-3">
+      <div class="text-center mb-5">
+        <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill glass-card mb-4">
+          <span class="dot-pulse"></span>
+          <span class="text-white small fw-bold text-uppercase" style="letter-spacing:0.1em; font-size: 0.7rem;">E-STAT Japan Official Database Connected</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="white">Rancang Langkah ke Jepang</span><br />
+          <span class="gradient">Berdasarkan Peta Data Akurat</span>
+        </h1>
+
+        <p class="text-white-50 fs-6 mx-auto mb-4" style="max-width: 820px; font-weight: 400; line-height: 1.7;">Sistem Pendukung Keputusan yang mengombinasikan analisis kesiapan personal mahasiswa dan pengolahan data makroskopis dari portal statistik resmi Pemerintah Jepang.</p>
+
+        <a href="https://www.e-stat.go.jp/en" target="_blank" class="estat-link small">Sumber Data Resmi: Portal Statistics of Japan (e-Stat) <i class="bi bi-box-arrow-up-right text-cyan"></i></a>
+      </div>
+
+      <div class="row g-4 mb-5 pt-2">
+        <div class="col-12 d-flex align-items-center mb-2">
+          <h6 class="text-white fw-bold m-0 text-uppercase" style="letter-spacing:0.15em; font-size: 0.8rem;"><i class="bi bi-cpu me-2 text-pink"></i> Alur Analisis Rekomendasi</h6>
+          <div class="flex-grow-1 ms-3 border-top border-white border-opacity-10"></div>
+        </div>
+
+        <div class="col-12">
+          <div class="workflow-scroll-container row g-4 flex-nowrap flex-md-wrap overflow-md-visible">
+            
+            <div class="workflow-card-wrapper col-md-3">
+              <div class="glass-card p-4 h-100">
+                <div class="workflow-num mb-3">PHASE 01</div>
+                <i class="bi bi-shield-lock text-white fs-3 mb-3 d-block"></i>
+                <h6 class="text-white fw-bold mb-2">Biodata Pengguna</h6>
+                <p class="small text-white-50 mb-0" style="line-height:1.6;">Sinkronisasi profil akademik, kompetensi, dan preferensi awal wilayah kerja.</p>
+              </div>
+            </div>
+
+            <div class="workflow-card-wrapper col-md-3">
+              <div class="glass-card p-4 h-100">
+                <div class="workflow-num mb-3">PHASE 02</div>
+                <i class="bi bi-sliders2-vertical text-white fs-3 mb-3 d-block"></i>
+                <h6 class="text-white fw-bold mb-2">Kuesioner Kesiapan</h6>
+                <p class="small text-white-50 mb-0" style="line-height:1.6;">Evaluasi tingkat adaptabilitas bahasa, pemahaman budaya, psikologi, dan finansial.</p>
+              </div>
+            </div>
+
+            <div class="workflow-card-wrapper col-md-3">
+              <div class="glass-card p-4 h-100">
+                <div class="workflow-num mb-3">PHASE 03</div>
+                <i class="bi bi-database-fill-down text-white fs-3 mb-3 d-block"></i>
+                <h6 class="text-white fw-bold mb-2">Analisis Dataset</h6>
+                <p class="small text-white-50 mb-0" style="line-height:1.6;">Komparasi real-data e-Stat mencakup upah minimum, biaya hidup, sewa, dan peluang kerja.</p>
+              </div>
+            </div>
+
+            <div class="workflow-card-wrapper col-md-3">
+              <div class="glass-card p-4 h-100">
+                <div class="workflow-num mb-3">PHASE 04</div>
+                <i class="bi bi-trophy text-white fs-3 mb-3 d-block"></i>
+                <h6 class="text-white fw-bold mb-2">Hasil Rekomendasi</h6>
+                <p class="small text-white-50 mb-0" style="line-height:1.6;">Integrasi perhitungan MFEP & SAW menghasilkan urutan prefektur paling optimal.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-7">
+          <div class="glass-card p-4 p-md-5 methodology-box h-100">
+            <h3 class="text-white fw-bold mb-3" style="font-family: 'Space Grotesk', sans-serif;">Bobot Keputusan Transparan</h3>
+            <p class="text-white-50 mb-4" style="text-align: justify; line-height:1.8; font-size: 0.95rem;">
+              Berbeda dengan sistem rekomendasi subjektif, MIRAIZU memproses pencocokan menggunakan perhitungan matriks normalisasi. Setiap data prefektur dihitung secara adil berdasarkan parameter kriteria keuntungan (<em>Benefit</em>) dan beban (<em>Cost</em>) untuk meminimalkan risiko salah penempatan.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-interactive">Benefit-Cost Analysis</span>
+              <span class="badge-interactive">Multi-Factor Evaluation</span>
+              <span class="badge-interactive">Simple Additive Weighting</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="glass-card p-4 p-md-5 h-100">
+            <h4 class="text-white fw-bold mb-4" style="font-family: 'Space Grotesk', sans-serif;">Keunggulan Sistem</h4>
+            <div class="d-flex mb-4">
+              <i class="bi bi-check2-circle text-pink fs-4 me-3"></i>
+              <div>
+                <h6 class="text-white mb-1">Objektivitas Mutlak</h6>
+                <p class="small text-white-50 m-0">Keputusan murni dari data empiris, menghindari bias popularitas kota besar.</p>
+              </div>
+            </div>
+            <div class="d-flex mb-4">
+              <i class="bi bi-lightning-charge text-pink fs-4 me-3"></i>
+              <div>
+                <h6 class="text-white mb-1">Kalkulasi Instan</h6>
+                <p class="small text-white-50 m-0">Mengintegrasikan penilaian kuesioner dengan ribuan baris data e-Stat secara cepat.</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <i class="bi bi-eye text-pink fs-4 me-3"></i>
+              <div>
+                <h6 class="text-white mb-1">Komparasi Interaktif</h6>
+                <p class="small text-white-50 m-0">Menyajikan visualisasi grafik makro prefektur untuk kenyamanan analisis mahasiswa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center py-4">
+        <a href="{{ url_for('biodata') }}" class="btn-spk btn-lg px-5 py-3 fs-6">Mulai Analisis Sekarang <i class="bi bi-rocket-takeoff ms-2"></i></a>
+        <p class="text-white-50 small mt-3">Estimasi waktu pengisian data: 3–5 menit</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

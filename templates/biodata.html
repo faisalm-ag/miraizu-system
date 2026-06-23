@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <style>
+    .miraizu-brand-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 1rem;
+    }
+    
+    .big-kanji {
+      font-family: 'Space Grotesk', 'MS Gothic', sans-serif;
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 30px rgba(255, 46, 147, 0.3);
+    }
+    
+    .big-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-indigo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+    
+    .biodata-card {
+      background: var(--card-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-glass);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .form-label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #e5e7eb;
+      margin-bottom: 0.6rem;
+    }
+    
+    .form-control,
+    .form-select {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 12px;
+      color: #ffffff !important;
+      padding: 12px 16px;
+      transition: all 0.2s ease;
+    }
+    
+    .form-select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    }
+    
+    .form-select option {
+      background-color: #0d0f18 !important;
+      color: #ffffff !important;
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--accent-pink) !important;
+      box-shadow: 0 0 12px rgba(255, 46, 147, 0.25) !important;
+      outline: none;
+    }
+    
+    .btn-next {
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-indigo));
+      color: #ffffff;
+      border-radius: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      padding: 12px 24px;
+      border: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-next:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 46, 147, 0.3);
+      color: #fff;
+    }
+    
+    .btn-back {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-back:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 991.98px) {
+      .miraizu-brand-side {
+        text-center: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .big-kanji {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+
+  <div class="container py-4 py-lg-5">
+    <div class="row align-items-center g-4 g-lg-5">
+      
+      <div class="col-lg-5">
+        <div class="miraizu-brand-side">
+          <div class="big-kanji">未来図</div>
+          <h1 class="big-title">Biodata Analisis</h1>
+          <p class="text-white-50 fs-6 m-0" style="line-height: 1.6;">Langkah pertama dimulai dari sini. Masukkan data dasar Anda agar MIRAIZU dapat melakukan pemetaan prefektur yang presisi.</p>
+          <div class="mt-3 d-none d-lg-block">
+            <span class="badge-method text-white">Step 01 of 04</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="biodata-card">
+          <form action="{{ url_for('biodata') }}" method="POST" id="biodataForm">
+            
+            <div class="mb-4">
+              <label for="nama" class="form-label"><i class="bi bi-person me-2 text-pink"></i>Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama" name="nama" autocomplete="off" required />
+            </div>
+
+            <div class="mb-4">
+              <label for="bidang_peminatan" class="form-label"><i class="bi bi-briefcase me-2 text-pink"></i>Bidang Pekerjaan</label>
+              <select class="form-select" id="bidang_peminatan" name="bidang_peminatan" required>
+                <option value="" selected disabled>Pilih bidang pekerjaan...</option>
+                {% for bidang in bidang_options %}
+                  <option value="{{ bidang }}">{{ bidang }}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="mb-4 mb-lg-5">
+              <label for="lokasi_peminatan" class="form-label"><i class="bi bi-geo-alt me-2 text-pink"></i>Lokasi Prefektur Tujuan</label>
+              <select class="form-select" id="lokasi_peminatan" name="lokasi_peminatan" required>
+                <option value="" selected disabled>Pilih prefektur jepang...</option>
+                {% for lokasi in lokasi_options %}
+                  <option value="{{ lokasi }}">{{ lokasi }}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center pt-3 border-top border-white border-opacity-5">
+              <a href="{{ url_for('index') }}" class="btn-back"><i class="bi bi-arrow-left me-2"></i>Kembali</a>
+              <button type="submit" class="btn-next">Lanjut Kuesioner<i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
