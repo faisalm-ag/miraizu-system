@@ -6,6 +6,7 @@
       --primary-bg: #05060a;
       --accent-pink: #ff2e93;
       --accent-indigo: #6366f1;
+      --accent-cyan: #22d3ee;
       --card-glass: rgba(13, 15, 24, 0.7);
       --border-glass: rgba(255, 255, 255, 0.04);
       --pink-glow: rgba(255, 46, 147, 0.03);
@@ -59,7 +60,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    
     .glass-card {
       background: var(--card-glass);
       backdrop-filter: blur(20px);
@@ -71,9 +71,10 @@
     }
     
     .glass-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -5px rgba(255, 46, 147, 0.12);
-      border-color: rgba(255, 46, 147, 0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px -5px rgba(255, 46, 147, 0.15), 0 0 20px -2px rgba(99, 102, 241, 0.1);
+      border-color: rgba(255, 46, 147, 0.35);
+      background: rgba(18, 20, 32, 0.85);
     }
     
     .badge-interactive {
@@ -92,6 +93,7 @@
       color: var(--text-main);
       border-color: rgba(255, 46, 147, 0.3);
       background: rgba(255, 46, 147, 0.02);
+      transform: scale(1.03);
     }
     
     .estat-link {
@@ -127,7 +129,6 @@
       background: linear-gradient(180deg, rgba(255, 46, 147, 0.03) 0%, rgba(5, 6, 10, 0) 100%);
       border-left: 3px solid var(--accent-pink) !important;
     }
-    
     .dot-pulse {
       width: 8px;
       height: 8px;
@@ -137,17 +138,37 @@
     }
     
     @keyframes pulse-green {
-      0% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
-      }
-      70% {
-        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
-    
+    .dot-pulse-pink {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-pink);
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse-pink-glow 2.5s infinite;
+    }
+
+    @keyframes pulse-pink-glow {
+      0% { box-shadow: 0 0 0 0 rgba(255, 46, 147, 0.7); transform: scale(0.95); }
+      70% { box-shadow: 0 0 0 8px rgba(255, 46, 147, 0); transform: scale(1.1); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 46, 147, 0); transform: scale(0.95); }
+    }
+    .floating-icon {
+      animation: float-slow 4s ease-in-out infinite;
+      color: #ffffff;
+    }
+    .workflow-card-wrapper:nth-child(2) .floating-icon { animation-delay: 0.7s; }
+    .workflow-card-wrapper:nth-child(3) .floating-icon { animation-delay: 1.4s; }
+    .workflow-card-wrapper:nth-child(4) .floating-icon { animation-delay: 2.1s; }
+
+    @keyframes float-slow {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); color: var(--accent-cyan); }
+      100% { transform: translateY(0px); }
+    }
     .btn-spk {
       background: linear-gradient(135deg, var(--accent-pink), var(--accent-indigo));
       color: #ffffff;
@@ -160,18 +181,34 @@
       text-decoration: none;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       box-shadow: 0 10px 30px rgba(255, 46, 147, 0.2);
+      position: relative;
+      overflow: hidden;
     }
     
+    .btn-spk::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+      transform: skewX(-25deg);
+      transition: 0.75s;
+    }
+
+    .btn-spk:hover::before {
+      left: 125%;
+    }
+
     .btn-spk:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(255, 46, 147, 0.4);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(255, 46, 147, 0.45), 0 0 25px rgba(99, 102, 241, 0.2);
       color: #ffffff;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
     }
     
-    .text-pink {
-      color: var(--accent-pink);
-    }
+    .text-pink { color: var(--accent-pink); }
+    .text-cyan { color: var(--accent-cyan); }
+    .text-justify { text-align: justify !important; }
 
     @media (max-width: 767.98px) {
       .workflow-scroll-container {
@@ -214,9 +251,10 @@
       </div>
 
       <div class="row g-4 mb-5 pt-2">
-        <div class="col-12 d-flex align-items-center mb-2">
-          <h6 class="text-white fw-bold m-0 text-uppercase" style="letter-spacing:0.15em; font-size: 0.8rem;"><i class="bi bi-cpu me-2 text-pink"></i> Alur Analisis Rekomendasi</h6>
-          <div class="flex-grow-1 ms-3 border-top border-white border-opacity-10"></div>
+        <div class="col-12 d-flex align-items-center mb-2 gap-2">
+          <span class="dot-pulse-pink"></span>
+          <h6 class="text-white fw-bold m-0 text-uppercase" style="letter-spacing:0.15em; font-size: 0.8rem;"><i class="bi bi-cpu me-1 text-pink"></i> Alur Analisis Rekomendasi</h6>
+          <div class="flex-grow-1 ms-2 border-top border-white border-opacity-10"></div>
         </div>
 
         <div class="col-12">
@@ -225,36 +263,36 @@
             <div class="workflow-card-wrapper col-md-3">
               <div class="glass-card p-4 h-100">
                 <div class="workflow-num mb-3">PHASE 01</div>
-                <i class="bi bi-shield-lock text-white fs-3 mb-3 d-block"></i>
+                <i class="bi bi-shield-lock fs-3 mb-3 d-block floating-icon"></i>
                 <h6 class="text-white fw-bold mb-2">Biodata Pengguna</h6>
-                <p class="small text-white-50 mb-0" style="line-height:1.6;">Sinkronisasi profil akademik, kompetensi, dan preferensi awal wilayah kerja.</p>
+                <p class="small text-white-50 mb-0 text-justify" style="line-height:1.6;">Sinkronisasi profil akademik, kompetensi, dan preferensi awal wilayah kerja.</p>
               </div>
             </div>
 
             <div class="workflow-card-wrapper col-md-3">
               <div class="glass-card p-4 h-100">
                 <div class="workflow-num mb-3">PHASE 02</div>
-                <i class="bi bi-sliders2-vertical text-white fs-3 mb-3 d-block"></i>
+                <i class="bi bi-sliders2-vertical fs-3 mb-3 d-block floating-icon"></i>
                 <h6 class="text-white fw-bold mb-2">Kuesioner Kesiapan</h6>
-                <p class="small text-white-50 mb-0" style="line-height:1.6;">Evaluasi tingkat adaptabilitas bahasa, pemahaman budaya, psikologi, dan finansial.</p>
+                <p class="small text-white-50 mb-0 text-justify" style="line-height:1.6;">Evaluasi tingkat adaptabilitas bahasa, pemahaman budaya, psikologi, dan finansial.</p>
               </div>
             </div>
 
             <div class="workflow-card-wrapper col-md-3">
               <div class="glass-card p-4 h-100">
                 <div class="workflow-num mb-3">PHASE 03</div>
-                <i class="bi bi-database-fill-down text-white fs-3 mb-3 d-block"></i>
+                <i class="bi bi-database-fill-down fs-3 mb-3 d-block floating-icon"></i>
                 <h6 class="text-white fw-bold mb-2">Analisis Dataset</h6>
-                <p class="small text-white-50 mb-0" style="line-height:1.6;">Komparasi real-data e-Stat mencakup upah minimum, biaya hidup, sewa, dan peluang kerja.</p>
+                <p class="small text-white-50 mb-0 text-justify" style="line-height:1.6;">Komparasi real-data e-Stat mencakup upah minimum, biaya hidup, sewa, dan peluang kerja.</p>
               </div>
             </div>
 
             <div class="workflow-card-wrapper col-md-3">
               <div class="glass-card p-4 h-100">
                 <div class="workflow-num mb-3">PHASE 04</div>
-                <i class="bi bi-trophy text-white fs-3 mb-3 d-block"></i>
+                <i class="bi bi-trophy fs-3 mb-3 d-block floating-icon"></i>
                 <h6 class="text-white fw-bold mb-2">Hasil Rekomendasi</h6>
-                <p class="small text-white-50 mb-0" style="line-height:1.6;">Integrasi perhitungan MFEP & SAW menghasilkan urutan prefektur paling optimal.</p>
+                <p class="small text-white-50 mb-0 text-justify" style="line-height:1.6;">Integrasi perhitungan MFEP & SAW menghasilkan urutan prefektur paling optimal.</p>
               </div>
             </div>
 
@@ -283,21 +321,21 @@
               <i class="bi bi-check2-circle text-pink fs-4 me-3"></i>
               <div>
                 <h6 class="text-white mb-1">Objektivitas Mutlak</h6>
-                <p class="small text-white-50 m-0">Keputusan murni dari data empiris, menghindari bias popularitas kota besar.</p>
+                <p class="small text-white-50 m-0 text-justify">Keputusan murni dari data empiris, menghindari bias popularitas kota besar.</p>
               </div>
             </div>
             <div class="d-flex mb-4">
               <i class="bi bi-lightning-charge text-pink fs-4 me-3"></i>
               <div>
                 <h6 class="text-white mb-1">Kalkulasi Instan</h6>
-                <p class="small text-white-50 m-0">Mengintegrasikan penilaian kuesioner dengan ribuan baris data e-Stat secara cepat.</p>
+                <p class="small text-white-50 m-0 text-justify">Mengintegrasikan penilaian kuesioner dengan ribuan baris data e-Stat secara cepat.</p>
               </div>
             </div>
             <div class="d-flex">
               <i class="bi bi-eye text-pink fs-4 me-3"></i>
               <div>
                 <h6 class="text-white mb-1">Komparasi Interaktif</h6>
-                <p class="small text-white-50 m-0">Menyajikan visualisasi grafik makro prefektur untuk kenyamanan analisis mahasiswa.</p>
+                <p class="small text-white-50 m-0 text-justify">Menyajikan visualisasi grafik makro prefektur untuk kenyamanan analisis mahasiswa.</p>
               </div>
             </div>
           </div>

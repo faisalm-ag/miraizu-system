@@ -3,11 +3,12 @@
 {% block content %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Space+Grotesk:wght=500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
 <style>
     :root {
-        --primary-bg: #05060A;       
+        --primary-bg: #05060A;        
         --accent-pink: #FF2E93;      
         --accent-indigo: #6366F1;    
         --accent-cyan: #22D3EE;
@@ -16,7 +17,7 @@
         --card-glass: rgba(13, 15, 24, 0.75); 
         --border-glass: rgba(255, 255, 255, 0.04);
         --glow-color: rgba(99, 102, 241, 0.03); 
-        --text-main: #F3F4F6;
+        --text-main: #FFFFFF; 
         --text-muted: #9CA3AF;
     }
     body {
@@ -30,12 +31,10 @@
         width: 100%;
         max-width: 1440px; 
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0 0.75rem; /* Lebih rapat di mobile agar space maksimal */
     }
     @media (min-width: 576px) {
-        .widescreen-wrapper {
-            padding: 0 1.5rem;
-        }
+        .widescreen-wrapper { padding: 0 1.5rem; }
     }
     .glass-card {
         background: var(--card-glass);
@@ -44,35 +43,48 @@
         border: 1px solid var(--border-glass);
         border-radius: 24px;
         box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.5);
-        padding: clamp(1.25rem, 4vw, 3rem);
+        padding: clamp(1rem, 4vw, 3rem); /* Dioptimalkan agar di mobile tidak terlalu memakan space */
     }
     .inner-dashboard-card {
         background: rgba(255, 255, 255, 0.01);
-        border: 1px solid rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.04);
         border-radius: 16px;
-        padding: 1.5rem;
+        padding: 1.25rem; /* Sedikit dikecilkan untuk mobile */
+        position: relative;
+        overflow: hidden;
+    }
+    @media (min-width: 768px) {
+        .inner-dashboard-card { padding: 1.5rem; }
+    }
+    .inner-dashboard-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-indigo), transparent);
     }
     .status-badge-ready {
-        background: rgba(16, 185, 129, 0.1);
-        border: 1px solid rgba(16, 185, 129, 0.3);
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid var(--accent-emerald);
         color: var(--accent-emerald);
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 700;
-        padding: 0.4rem 1.2rem;
-        border-radius: 8px;
-        display: inline-block;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+        white-space: nowrap;
     }
     .status-badge-eval {
-        background: rgba(239, 68, 68, 0.1);
-        border: 1px solid rgba(239, 68, 68, 0.3);
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid #EF4444;
         color: #EF4444;
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 700;
-        padding: 0.4rem 1.2rem;
-        border-radius: 8px;
-        display: inline-block;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.2);
+        white-space: nowrap;
     }
     .table-miraizu {
         color: var(--text-main);
@@ -80,24 +92,19 @@
         border-color: rgba(255, 255, 255, 0.03);
     }
     .table-miraizu thead th {
-        background-color: rgba(255, 255, 255, 0.02) !important;
+        background-color: rgba(13, 15, 24, 0.95) !important;
         color: var(--text-muted);
         font-family: 'Space Grotesk', sans-serif;
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-        padding: 12px 16px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .table-miraizu tbody td {
         padding: 14px 16px;
-        background: transparent !important;
     }
     .rank-number {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,236 +112,346 @@
         font-size: 0.85rem;
     }
     .rank-1 { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-    .rank-2 { background: rgba(255, 255, 255, 0.05); color: #E5E7EB; border: 1px solid rgba(255, 255, 255, 0.1); }
+    .rank-2 { background: rgba(229, 231, 235, 0.1); color: #E5E7EB; border: 1px solid rgba(229, 231, 235, 0.2); }
     .rank-3 { background: rgba(168, 85, 247, 0.15); color: #A855F7; border: 1px solid rgba(168, 85, 247, 0.3); }
     .rank-other { background: rgba(255, 255, 255, 0.01); color: var(--text-muted); }
     
+    .podium-card {
+        background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%);
+        border: 1px solid rgba(255,255,255,0.04);
+        border-radius: 20px;
+        padding: 1.5rem;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+    }
+    .podium-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(99, 102, 241, 0.3);
+        box-shadow: 0 15px 30px rgba(99, 102, 241, 0.1);
+    }
+    .podium-card.first-place {
+        border-color: rgba(245, 158, 11, 0.25);
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.04) 0%, transparent 100%);
+    }
+    
     .recommendation-box {
-        background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(255, 46, 147, 0.02) 100%);
-        border: 1px solid rgba(99, 102, 241, 0.15);
-        border-radius: 16px;
-        padding: clamp(1.25rem, 3vw, 2rem);
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(255, 46, 147, 0.03) 100%);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 20px;
+        padding: clamp(1.25rem, 4vw, 2.5rem);
     }
     .reflection-card {
         background: rgba(255, 255, 255, 0.01);
         border-left: 4px solid var(--accent-pink);
-        border-radius: 12px;
-        padding: 1.2rem;
+        border-radius: 14px;
+        padding: 1.25rem;
+    }
+    @media (min-width: 768px) {
+        .reflection-card { padding: 1.5rem; }
     }
     .btn-restart {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+        background: linear-gradient(135deg, var(--accent-pink), var(--accent-indigo));
         color: var(--text-main);
-        border-radius: 12px;
+        border-radius: 14px;
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
-        letter-spacing: 0.05em;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 14px 32px;
+        letter-spacing: 0.03em;
+        border: none;
+        padding: 14px 28px;
         transition: all 0.3s ease;
         text-decoration: none;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        box-shadow: 0 8px 24px rgba(255, 46, 147, 0.25);
+        width: 100%; /* Full width di mobile */
+    }
+    @media (min-width: 576px) {
+        .btn-restart {
+            width: auto; /* Balik otomatis di desktop */
+            padding: 16px 36px;
+        }
     }
     .btn-restart:hover {
-        border-color: rgba(255, 46, 147, 0.4);
-        background: rgba(255, 46, 147, 0.05);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(255, 46, 147, 0.4);
         color: #ffffff;
     }
-    @media (max-width: 767.98px) {
-        .identity-divider {
-            border-end: none !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 12px;
-            margin-bottom: 12px;
-        }
-        .identity-divider:last-child {
-            border-bottom: none !important;
-            padding-bottom: 0;
-            margin-bottom: 0;
+    .text-justify { text-align: justify !important; }
+    
+    .fin-widget {
+        border-radius: 14px;
+        padding: 1rem;
+        background: rgba(255,255,255,0.01);
+        border: 1px solid rgba(255,255,255,0.03);
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+    }
+    @media (min-width: 576px) {
+        .fin-widget {
+            padding: 1.25rem;
+            gap: 1rem;
         }
     }
-    @media (max-width: 576.98px) {
-        .footer-actions-container {
-            flex-direction: column-reverse;
-            gap: 16px;
-            text-align: center;
+    .fin-icon {
+        width: 42px; height: 42px;
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0; /* Mencegah ikon gepeng di mobile */
+    }
+    @media (min-width: 576px) {
+        .fin-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            font-size: 1.25rem;
         }
-        .footer-actions-container a {
-            width: 100%;
+    }
+    .identity-divider {
+        position: relative;
+    }
+    @media (min-width: 768px) {
+        .identity-divider:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 15%; width: 1px; height: 70%;
+            background: rgba(255, 255, 255, 0.08);
+        }
+    }
+    @media (max-width: 767.98px) {
+        .identity-divider:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
     }
 </style>
 
-<div class="widescreen-wrapper py-4">
+<div class="widescreen-wrapper py-4 py-md-5">
     <div class="glass-card">
         
         <div class="text-center mb-4 mb-md-5">
-            <h2 class="text-white fw-bold mb-1" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.5rem, 3vw, 2.25rem);">Hasil Akhir Rekomendasi Program</h2>
-            <p class="text-white-50 small mb-0">Keluaran Utama Pengambilan Keputusan Objektif Berdasarkan Kondisi Internal Mahasiswa & Eksternal Prefektur</p>
+            <span class="badge uppercase mb-2 px-3 py-2" style="background: rgba(99, 102, 241, 0.1); color: var(--accent-cyan); border: 1px solid rgba(34,211,238,0.2); font-family: 'Space Grotesk'; letter-spacing: 1px; white-space: normal;">Hasil Akhir Sistem MIRAIZU</span>
+            <h2 class="text-white fw-800 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 4vw, 2.5rem); letter-spacing: -0.5px;">Hasil Analisis Rekomendasi Akhir</h2>
+            <p class="text-white-50 mx-auto px-2" style="max-width: 700px; font-size: 0.9rem;">Keputusan objektif multikriteria berdasarkan sinkronisasi matriks kesiapan personal internal dan indikator ekonomi eksternal wilayah Jepang.</p>
         </div>
 
-        <div class="inner-dashboard-card mb-4" style="background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.05);">
-            <div class="row align-items-center g-3">
-                <div class="col-md-3 identity-divider text-center text-md-start">
-                    <span class="text-muted d-block small text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.7rem;">Nama Mahasiswa</span>
-                    <h5 class="text-white fw-bold mb-0 mt-1" id="summaryName" style="font-size: 1.05rem;">{{ mahasiswa.nama }}</h5>
+        <div class="inner-dashboard-card mb-4 mb-md-5" style="background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.06);">
+            <div class="row align-items-center g-3 text-start">
+                <div class="col-md-3 identity-divider">
+                    <span class="text-white-50 d-block small text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.7rem;">Kandidat Mahasiswa</span>
+                    <h5 class="text-white fw-bold mb-0 mt-1" style="font-size: 1rem;"><i class="bi bi-person-badge me-2 text-muted"></i>{{ mahasiswa.nama }}</h5>
                 </div>
-                <div class="col-md-5 identity-divider px-md-4 text-center text-md-start">
-                    <span class="text-muted d-block small text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.7rem;">Minat Bidang Kerja</span>
-                    <h5 class="text-cyan fw-bold mb-0 mt-1" style="font-size: 1.05rem;"><i class="bi bi-building-gear me-2" style="color: var(--accent-cyan);"></i>{{ mahasiswa.bidang_peminatan }}</h5>
+                <div class="col-md-5 identity-divider px-md-4">
+                    <span class="text-white-50 d-block small text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.7rem;">Klaster Keahlian Diminati</span>
+                    <h5 class="text-cyan fw-bold mb-0 mt-1" style="font-size: 1rem;"><i class="bi bi-cpu me-2" style="color: var(--accent-cyan);"></i>{{ mahasiswa.bidang_peminatan }}</h5>
                 </div>
-                <div class="col-md-4 identity-divider px-md-4 text-center text-md-start">
-                    <span class="text-muted d-block small text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.7rem;">Prefektur Target Awal</span>
-                    <h5 class="text-pink fw-bold mb-0 mt-1" id="summaryTargetPref" style="font-size: 1.05rem; color: var(--accent-pink);"><i class="bi bi-geo-alt me-2"></i>{{ mahasiswa.lokasi_peminatan }}</h5>
+                <div class="col-md-4 identity-divider px-md-4">
+                    <span class="text-white-50 d-block small text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.7rem;">Target Prefektur Awal</span>
+                    <h5 class="text-pink fw-bold mb-0 mt-1" style="font-size: 1rem; color: var(--accent-pink);"><i class="bi bi-geo-alt-fill me-2"></i>{{ mahasiswa.lokasi_peminatan }}</h5>
                 </div>
             </div>
         </div>
 
-        <div class="row g-4 gx-lg-5 mb-5">
-            
-            <div class="col-xl-5 col-lg-6">
+        <div class="row g-4 mb-4 mb-md-5">
+            <div class="col-lg-6">
                 <div class="inner-dashboard-card h-100 d-flex flex-column justify-content-between">
                     <div>
-                        <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div class="d-flex flex-row justify-content-between align-items-center flex-wrap gap-2 mb-4">
                             <div>
-                                <h5 class="text-white fw-bold mb-0" style="font-family: 'Space Grotesk', sans-serif;">Evaluasi Kesiapan (MFEP)</h5>
-                                <span class="text-muted small">Nilai pengolahan internal kuesioner</span>
+                                <h5 class="text-white fw-bold mb-0" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem;">Matriks Evaluasi Kesiapan (MFEP)</h5>
+                                <span class="text-white-50 small">Akurasi kuesioner instrumen internal regulasi</span>
                             </div>
                             {% if is_recommended %}
-                            <div class="status-badge-ready" id="mfepLabel">Siap</div>
+                            <div class="status-badge-ready"><i class="bi bi-check-circle-fill me-1"></i> Siap Berangkat</div>
                             {% else %}
-                            <div class="status-badge-eval" id="mfepLabel">Evaluasi</div>
+                            <div class="status-badge-eval"><i class="bi bi-exclamation-triangle-fill me-1"></i> Butuh Evaluasi</div>
                             {% endif %}
                         </div>
 
-                        <div class="text-center py-3 border-bottom border-white border-opacity-5 mb-4">
-                            <span class="text-white-50 small d-block mb-1">Skor Total Evaluasi Kesiapan</span>
-                            <h1 class="text-white fw-extrabold display-4 mb-0" style="font-family: 'Space Grotesk', sans-serif;" id="mfepScore">{{ "%.2f"|format(mfep.total_readiness_percentage) }}%</h1>
-                            <span class="text-muted small">Ambang Batas Target: {{ saw_target_score }}%</span>
+                        <div class="row align-items-center py-3 border-bottom border-white border-opacity-5 mb-4">
+                            <div class="col-6 text-start mb-0">
+                                <span class="text-white-50 small d-block mb-1">Skor Kesiapan Anda</span>
+                                <h1 class="text-white fw-extrabold mb-0" style="font-family: 'Space Grotesk', sans-serif; letter-spacing: -1px; font-size: clamp(1.8rem, 5vw, 2.75rem);">{{ "%.2f"|format(mfep.total_readiness_percentage) }}%</h1>
+                            </div>
+                            <div class="col-6 text-start border-start border-white border-opacity-10 ps-3 ps-sm-4">
+                                <span class="text-white-50 small d-block mb-1">Ambang Batas Minimum</span>
+                                <h3 class="text-white fw-bold mb-1" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.2rem, 4vw, 1.75rem);">{{ "%.2f"|format(saw_target_score) }}%</h3>
+                                <span class="badge {% if is_recommended %}bg-success-subtle text-success{% else %}bg-danger-subtle text-danger{% endif %} small" style="font-size: 0.7rem; padding: 4px 8px;">
+                                    {% if is_recommended %}Lolos Ambang Batas{% else %}Di bawah Target{% endif %}
+                                </span>
+                            </div>
                         </div>
 
-                        <div class="py-2 mb-2" style="height: 180px; position: relative; width: 100%;">
+                        <div class="py-2" style="height: 160px; position: relative; width: 100%;">
                             <canvas id="comparisonChart"></canvas>
                         </div>
                     </div>
-                    
-                    <p class="text-white-50 small mt-4 pt-3 border-top border-white border-opacity-5 mb-0" style="line-height: 1.6;">
-                        Skor dihitung berdasarkan bobot kepentingan faktor regulasi magang Jepang. Kategori 
+
+                    <p class="text-white-50 small mt-4 pt-3 border-top border-white border-opacity-5 mb-0 text-justify" style="line-height: 1.6; font-size: 0.85rem;">
+                        * Nilai dihitung secara otomatis oleh sistem menggunakan metode MFEP. Kategori 
                         {% if is_recommended %}
-                        <strong class="text-success">Siap</strong> menunjukkan instrumen internal mahasiswa terpenuhi dengan sangat baik.
+                        <strong style="color: var(--accent-emerald) !important;">Siap</strong> menunjukkan bahwa kondisi mental, kelengkapan dokumen, dan pemahaman terhadap aturan utama telah memenuhi kriteria untuk melanjutkan proses.
                         {% else %}
-                        <strong class="text-danger">Evaluasi Ulang Diperlukan</strong> menunjukkan instrumen internal masih di bawah ambang batas target.
+                        <strong style="color: #EF4444 !important;">Evaluasi</strong> menunjukkan bahwa masih ada beberapa aspek penting yang belum memenuhi kriteria dan perlu dipersiapkan lebih lanjut sebelum melanjutkan proses.
                         {% endif %}
                     </p>
                 </div>
             </div>
 
-            <div class="col-xl-7 col-lg-6">
+            <div class="col-lg-6">
+                {% if detail_ekonomi %}
                 <div class="inner-dashboard-card h-100 d-flex flex-column justify-content-between">
                     <div>
-                        <h5 class="text-white fw-bold mb-1" style="font-family: 'Space Grotesk', sans-serif;">Hasil Perankingan Prefektur (SAW)</h5>
-                        <p class="text-muted small mb-3">Peringkat preferensi alternatif berdasarkan optimasi kriteria makro ekonomi</p>
+                        <h5 class="text-white fw-bold mb-1" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem;">Rincian Nilai Finansial Bulanan</h5>
+                        <p class="text-white-50 small mb-4">Estimasi matematis operasional lajang di Prefektur {{ mahasiswa.lokasi_peminatan }}</p>
                         
-                        <div class="table-responsive" style="max-height: 380px; overflow-y: auto; border-radius: 8px;">
-                            <table class="table table-dark table-borderless table-miraizu align-middle mb-0">
-                                <thead style="position: sticky; top: 0; background: #0d0f18; z-index: 2;">
-                                    <tr>
-                                        <th class="text-center" style="width: 15%;">Rank</th>
-                                        <th>Nama Prefektur</th>
-                                        <th class="text-end" style="width: 35%;">Nilai Preferensi (Vi)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {% for item in tabel_alternatif %}
-                                    {% set current_rank = loop.index %}
-                                    {% if current_rank == 1 %}
-                                        {% set rank_class = "rank-1" %}
-                                    {% elif current_rank == 2 %}
-                                        {% set rank_class = "rank-2" %}
-                                    {% elif current_rank == 3 %}
-                                        {% set rank_class = "rank-3" %}
-                                    {% else %}
-                                        {% set rank_class = "rank-other" %}
-                                    {% endif %}
-                                    
-                                    {% set is_selected = (item.prefektur_en|lower == mahasiswa.lokasi_peminatan|lower) %}
-                                    
-                                    <tr {% if is_selected %}style='background: rgba(255, 46, 147, 0.06) !important; border-left: 3px solid var(--accent-pink);'{% endif %}>
-                                        <td class="text-center">
-                                            <div class="rank-number {{ rank_class }} mx-auto">{{ current_rank }}</div>
-                                        </td>
-                                        <td>
-                                            <strong class="text-white">{{ item.prefektur_en }}</strong>
-                                            {% if is_selected %}
-                                            <span class="badge bg-danger ms-2" style="font-size:0.65rem;">Pilihan Anda</span>
-                                            {% endif %}
-                                        </td>
-                                        <td class="text-end fw-bold text-cyan" style="font-family: 'Space Grotesk', sans-serif; color: var(--accent-cyan);">
-                                            {{ "%.2f"|format(item.saw_score_percentage) }}%
-                                        </td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
+                        <div class="d-flex flex-column gap-2 gap-sm-3">
+                            <div class="fin-widget">
+                                <div class="fin-icon" style="background: rgba(34,211,238,0.1); color: var(--accent-cyan);"><i class="bi bi-cash-stack"></i></div>
+                                <div>
+                                    <span class="text-white-50 small d-block" style="font-size: 0.8rem;">Gaji Pokok Rata-Rata Bulanan</span>
+                                    <strong class="text-white" style="font-size: clamp(1.1rem, 3vw, 1.25rem); font-family: 'Space Grotesk';">¥{{ "{:,}".format(detail_ekonomi.gaji_pokok_bulanan|int) }}</strong>
+                                </div>
+                            </div>
+
+                            <div class="fin-widget">
+                                <div class="fin-icon" style="background: rgba(255, 46, 147, 0.1); color: var(--accent-pink);"><i class="bi bi-cart-dash"></i></div>
+                                <div>
+                                    <span class="text-white-50 small d-block" style="font-size: 0.8rem;">Total Beban (Biaya Hidup + Sewa Kamar)</span>
+                                    <strong class="text-white" style="font-size: clamp(1.1rem, 3vw, 1.25rem); font-family: 'Space Grotesk';">¥{{ "{:,}".format((detail_ekonomi.biaya_hidup_nominal_yen|int + detail_ekonomi.biaya_sewa_nominal_yen|int)) }}</strong>
+                                </div>
+                            </div>
+
+                            <div class="fin-widget" style="background: {% if sisa_uang >= 0 %}rgba(16, 185, 129, 0.05){% else %}rgba(239, 68, 68, 0.05){% endif %}; border: 1px solid {% if sisa_uang >= 0 %}rgba(16, 185, 129, 0.2){% else %}rgba(239, 68, 68, 0.2){% endif %};">
+                                <div class="fin-icon" style="background: {% if sisa_uang >= 0 %}var(--accent-emerald){% else %}#EF4444{% endif %}; color: #fff;">
+                                    <i class="bi {% if sisa_uang >= 0 %}bi-wallet2{% else %}bi-graph-down-arrow{% endif %}"></i>
+                                </div>
+                                <div>
+                                    <span class="text-white-50 small d-block" style="font-size: 0.8rem;">Estimasi Bersih Sisa Pendapatan</span>
+                                    <strong class="{% if sisa_uang >= 0 %}text-success{% else %}text-danger{% endif %}" style="font-size: clamp(1.25rem, 4vw, 1.5rem); font-family: 'Space Grotesk'; {% if sisa_uang >= 0 %}color: var(--accent-emerald) !important;{% endif %}">
+                                        ¥{{ "{:,}".format(sisa_uang|int) }}
+                                    </strong>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mt-3 small text-white-50 pt-2 border-top border-white border-opacity-5">
-                        * Matriks SAW mengolah kriteria Gaji (Benefit), Biaya Hidup (Cost), Biaya Sewa (Cost), dan Rasio Lowongan Kerja (Benefit) secara objektif.
+
+                    <div class="p-3 rounded mt-4" style="background: rgba(255, 255, 255, 0.015); border-left: 4px solid var(--accent-cyan);">
+                        <p class="small text-white-50 mb-0 text-justify" style="line-height: 1.6; font-size: 0.85rem;">
+                            <i class="bi bi-info-circle text-cyan me-2" style="color: var(--accent-cyan);"></i>
+                            Tercatat proyeksi dana <strong>Bonus Tahunan Rata-Rata sebesar ¥{{ "{:,}".format(detail_ekonomi.bonus_tahunan_rata_rata|int) }}</strong> di {{ mahasiswa.lokasi_peminatan }}. Angka ini bersifat informatif tahunan dan sengaja dikeluarkan dari kalkulasi rutin bulanan Anda demi keamanan perencanaan.
+                        </p>
                     </div>
                 </div>
+                {% endif %}
             </div>
-
         </div>
 
-        <div class="recommendation-box mb-5" style="border-left: 6px solid {% if is_recommended %}var(--accent-emerald){% else %}var(--accent-pink){% endif %};">
-            <div class="d-flex align-items-center gap-3 mb-3">
-                <div class="p-2 rounded-circle" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4);">
-                    <i class="bi {% if is_recommended %}bi-shield-check text-success{% else %}bi-exclamation-triangle text-danger{% endif %}" style="font-size: 1.5rem;"></i>
-                </div>
-                <h4 class="text-white fw-bold mb-0" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Keputusan Rekomendasi Akhir Sistem</h4>
+        <div class="mb-4 mb-md-5">
+            <div class="d-flex align-items-center gap-2 mb-4">
+                <i class="bi bi-trophy text-amber" style="color: var(--accent-amber); font-size: 1.25rem;"></i>
+                <h5 class="text-white fw-bold mb-0" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem;">Alternatif Prefektur Rekomendasi Teratas (SAW)</h5>
             </div>
             
-            <div class="text-white-50" style="line-height: 1.8; font-size: 0.95rem;">
-                {{ narasi | safe }}
-            </div>
-
-            <div class="mt-4 pt-4 border-top border-white border-opacity-5">
-                <h6 class="text-white fw-bold mb-2"><i class="bi bi-shuffle text-cyan me-2" style="color: var(--accent-cyan);"></i>Alternatif Lokasi Rekomendasi Lain yang Sesuai:</h6>
-                <div class="d-flex flex-wrap gap-2 mt-2">
-                    {% for item in tabel_alternatif[:3] %}
-                    <span class="badge text-white p-2 px-3" style="background: rgba(255,255,255,0.02); border:1px solid rgba(34,211,238,0.2); border-radius:8px; font-size: 0.8rem;">
-                        <i class="bi bi-building text-cyan me-2" style="color: var(--accent-cyan);"></i>Prefektur {{ item.prefektur_en }} ({{ "%.2f"|format(item.saw_score_percentage) }}%)
-                    </span>
-                    {% endfor %}
+            <div class="row g-3">
+                {% for item in tabel_alternatif[:3] %}
+                <div class="col-md-4">
+                    <div class="podium-card {% if loop.index == 1 %}first-place{% endif %}">
+                        <div class="position-absolute top-0 end-0 p-3">
+                            <span class="rank-number {% if loop.index == 1 %}rank-1{% elif loop.index == 2 %}rank-2{% else %}rank-3{% endif %}">{{ loop.index }}</span>
+                        </div>
+                        <span class="text-white-50 small text-uppercase" style="font-size: 0.65rem; letter-spacing: 1px;">Rekomendasi #{{ loop.index }}</span>
+                        <h4 class="text-white fw-bold my-2" style="font-family: 'Space Grotesk'; font-size: 1.25rem;">Prefektur {{ item.prefektur_en }}</h4>
+                        <div class="d-flex align-items-center justify-content-between mt-3 pt-2 border-top border-white border-opacity-5">
+                            <span class="text-white-50 small" style="font-size: 0.8rem;">Akurasi Nilai (Vi)</span>
+                            <span class="fw-bold text-cyan" style="font-family: 'Space Grotesk'; color: var(--accent-cyan); font-size: 0.95rem;">{{ "%.2f"|format(item.saw_score_percentage) }}%</span>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
 
-        <div class="mb-4">
-            <h5 class="text-white fw-bold mb-3" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem;"><i class="bi bi-lightbulb text-pink me-2" style="color: var(--accent-pink);"></i>Ringkasan Analisis Sertifikasi Mahasiswa</h5>
+        <div class="inner-dashboard-card mb-4 mb-md-5">
+            <h5 class="text-white fw-bold mb-3" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem;">Hasil Seluruh Wilayah Berdasarkan Algoritma SAW</h5>
+            <div class="table-responsive" style="max-height: 290px; overflow-y: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <table class="table table-dark table-borderless table-miraizu align-middle mb-0">
+                    <thead style="position: sticky; top: 0; z-index: 2;">
+                        <tr>
+                            <th class="text-center" style="width: 20%;">Rank</th>
+                            <th>Nama Prefektur</th>
+                            <th class="text-end" style="width: 40%;">Nilai Preferensi Akhir (Vi)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in tabel_alternatif %}
+                        {% set current_rank = loop.index %}
+                        {% if current_rank == 1 %}{% set rank_class = "rank-1" %}
+                        {% elif current_rank == 2 %}{% set rank_class = "rank-2" %}
+                        {% elif current_rank == 3 %}{% set rank_class = "rank-3" %}
+                        {% else %}{% set rank_class = "rank-other" %}
+                        {% endif %}
+                        
+                        {% set is_selected = (item.prefektur_en|lower == mahasiswa.lokasi_peminatan|lower) %}
+                        
+                        <tr {% if is_selected %}style='background: rgba(255, 46, 147, 0.08) !important; border-left: 4px solid var(--accent-pink);'{% endif %}>
+                            <td class="text-center">
+                                <div class="rank-number {{ rank_class }} mx-auto">{{ current_rank }}</div>
+                            </td>
+                            <td>
+                                <strong class="text-white" style="font-size: 0.9rem;">{{ item.prefektur_en }}</strong>
+                                {% if is_selected %}
+                                <span class="badge bg-danger ms-1 ms-sm-2" style="font-size:0.6rem; padding: 3px 6px; border-radius: 4px; display: inline-block; white-space: nowrap;">Pilihan Anda</span>
+                                {% endif %}
+                            </td>
+                            <td class="text-end fw-bold text-cyan" style="font-family: 'Space Grotesk', sans-serif; color: var(--accent-cyan); font-size: 0.9rem;">
+                                {{ "%.2f"|format(item.saw_score_percentage) }}%
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="recommendation-box mb-4 mb-md-5" style="border-left: 6px solid {% if is_recommended %}var(--accent-emerald){% else %}var(--accent-pink){% endif %};">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="p-2 rounded-circle" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); flex-shrink: 0;">
+                    <i class="bi {% if is_recommended %}bi-shield-check text-success{% else %}bi-exclamation-triangle text-danger{% endif %}" style="font-size: 1.3rem;"></i>
+                </div>
+                <h4 class="text-white fw-bold mb-0" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem;">Keputusan Akhir Sistem</h4>
+            </div>
+            <div class="text-white-50 text-justify" style="line-height: 1.8; font-size: 0.9rem;">
+                {{ narasi | safe }}
+            </div>
+        </div>
+
+        <div class="mb-4 mb-md-5">
+            <h5 class="text-white fw-bold mb-3" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem;"><i class="bi bi-lightning-charge text-pink me-2" style="color: var(--accent-pink);"></i>Rencana Aksi & Regulasi Lanjutan</h5>
             <div class="row g-3">
                 <div class="col-md-6">
                     <div class="reflection-card h-100">
-                        <h6 class="text-success fw-bold mb-2"><i class="bi bi-plus-circle me-2"></i>Identitas Akun & Sertifikasi</h6>
-                        <p class="text-white-50 small mb-0" style="line-height: 1.6;">
-                            Mahasiswa atas nama <strong>{{ mahasiswa.nama }}</strong> dengan Nomor Induk Mahasiswa <strong>{{ mahasiswa.nim }}</strong> saat ini tercatat memiliki tingkat kualifikasi sertifikasi kebahasaan Jepang: <strong class="text-warning" style="color: var(--accent-amber);">{{ mahasiswa.jlpt }}</strong>.
+                        <h6 class="text-emerald fw-bold mb-2" style="color: var(--accent-emerald); font-size: 0.95rem;"><i class="bi bi-info-circle me-2"></i>Sifat Hasil & Pendukung Keputusan</h6>
+                        <p class="text-white-50 small mb-0 text-justify" style="line-height: 1.6; font-size: 0.85rem;">
+                            Pentig untuk dipahami bahwa hasil kalkulasi sistem ini <strong class="text-white">hanya berfungsi sebagai pendukung keputusan objektif.</strong> Keputusan keberangkatan harus tetap diselaraskan dengan kesiapan mental maupun finansial yang sebenarnya.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="reflection-card h-100" style="border-left-color: var(--accent-cyan);">
-                        <h6 class="text-cyan fw-bold mb-2"><i class="bi bi-exclamation-triangle me-2"></i>Catatan Tambahan Wilayah Target</h6>
-                        <p class="text-white-50 small mb-0" style="line-height: 1.6;">
-                            Pilihan utama Anda tertuju pada kota <strong>{{ mahasiswa.lokasi_peminatan }}</strong>. Pastikan indeks penyesuaian biaya hidup dan akomodasi lokal berkorelasi seimbang dengan bobot kelayakan yang telah dipetakan oleh algoritma SAW sistem.
+                        <h6 class="text-cyan fw-bold mb-2" style="color: var(--accent-cyan); font-size: 0.95rem;"><i class="bi bi-exclamation-circle me-2"></i>Catatan Penyelarasan Wilayah</h6>
+                        <p class="text-white-50 small mb-0 text-justify" style="line-height: 1.6; font-size: 0.85rem;">
+                            Target penempatan di <strong class="text-white">{{ mahasiswa.lokasi_peminatan }}</strong> memiliki tingkat persaingan bursa kerja lokal yang fluktuatif. Pastikan persiapan fisik Anda selaras dengan regulasi ketenagakerjaan setempat.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="d-flex justify-content-between align-items-center pt-4 mt-5 border-top border-white border-opacity-5 footer-actions-container">
-            <span class="text-muted small">ID Mahasiswa: {{ mahasiswa.nim }}</span>
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 pt-4 mt-4 mt-md-5 border-top border-white border-opacity-5">
+            <span class="text-white-50 small text-center text-sm-start" style="font-family: 'Space Grotesk';">Sistem Pendukung Keputusan MIRAIZU &copy; 2026</span>
             <a href="{{ url_for('reset') }}" class="btn-restart">
                 <i class="bi bi-arrow-counterclockwise me-2"></i>Ulangi Simulasi Analisis
             </a>
@@ -346,38 +463,29 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        /* Initialize context and metrics values mapping */
         const userScore = {{ mfep.total_readiness_percentage | float }};
         const targetScore = {{ saw_target_score | float }};
         
         const ctx = document.getElementById('comparisonChart').getContext('2d');
         new Chart(ctx, {
-            type: 'doughnut',
+            type: 'bar', 
             data: {
-                labels: ['Kesiapan Anda', 'Target Ambang Batas'],
+                labels: ['Kesiapan Anda', 'Ambang Batas'],
                 datasets: [{
                     data: [userScore, targetScore],
-                    backgroundColor: ['#22D3EE', 'rgba(255, 255, 255, 0.08)'],
-                    borderColor: ['#22D3EE', 'rgba(255, 255, 255, 0.15)'],
-                    borderWidth: 1
+                    backgroundColor: ['#22D3EE', 'rgba(255, 255, 255, 0.15)'],
+                    borderColor: ['#22D3EE', 'rgba(255, 255, 255, 0.3)'],
+                    borderWidth: 1,
+                    borderRadius: 8,
+                    barThickness: 20
                 }]
             },
             options: { 
+                indexAxis: 'y', 
                 responsive: true,
                 maintainAspectRatio: false,
-                cutout: '70%',
                 plugins: { 
-                    legend: { 
-                        position: 'bottom',
-                        labels: { 
-                            color: '#F3F4F6',
-                            padding: 15,
-                            font: { 
-                                family: 'Plus Jakarta Sans',
-                                size: 11
-                            } 
-                        } 
-                    },
+                    legend: { display: false }, 
                     tooltip: {
                         backgroundColor: 'rgba(13, 15, 24, 0.95)',
                         bodyFont: { family: 'Plus Jakarta Sans', size: 12 },
@@ -385,11 +493,22 @@
                         borderWidth: 1,
                         callbacks: {
                             label: function(context) {
-                                return ` ${context.label}: ${context.raw.toFixed(2)}%`;
+                                return ` Skor: ${context.raw.toFixed(2)}%`;
                             }
                         }
                     }
-                } 
+                },
+                scales: {
+                    x: {
+                        max: 100,
+                        grid: { color: 'rgba(255, 255, 255, 0.03)' },
+                        ticks: { color: '#9CA3AF', font: { family: 'Space Grotesk', size: 11 } }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: '#FFFFFF', font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 11 } }
+                    }
+                }
             }
         });
     });

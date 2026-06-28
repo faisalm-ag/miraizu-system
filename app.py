@@ -10,17 +10,12 @@ app.secret_key = 'miraizu_secret_key_sttc_2026'
 
 data_loader = MIRAIDataLoader()
 
-# =============================================================
 # 1. PRIMARY ROUTE
-# =============================================================
 @app.route('/')
 def index():
     return render_template('index.html')
 
-
-# =============================================================
 # 2. SEQUENTIAL WORKFLOW PIPELINE
-# =============================================================
 @app.route('/biodata', methods=['GET', 'POST'])
 def biodata():
     if request.method == 'POST':
@@ -72,10 +67,7 @@ def kuesioner():
 
     return render_template('kuesioner.html')
 
-
-# =============================================================
 # 3. INTERACTIVE ANALYTICS ENGINE
-# =============================================================
 @app.route('/alur/analisis-gaji')
 def gaji():
     if 'mfep_results' not in session:
@@ -110,14 +102,14 @@ def gaji():
                 top_10_render = df_filtered.head(9).to_dict(orient='records') + [data_mhs]
             
             nilai_gaji = int(data_mhs['gaji_pokok_bulanan'])
-            prefix_rank = "ke-1 (Maksimum)" if rank_mhs == 1 else f"ke-{rank_mhs} dari {total_wilayah} entitas wilayah"
+            prefix_rank = "ke-1 (Tertinggi)" if rank_mhs == 1 else f"ke-{rank_mhs} dari {total_wilayah} wilayah"
             
             narasi = (
-                f"Analisis komparatif pada sektor industri <strong>{bidang}</strong> menunjukkan bahwa lokasi target "
-                f"pilihan Anda (<strong>{lokasi}</strong>) memproyeksikan rerata upah pokok nominal sebesar <strong>¥{nilai_gaji:,}</strong> per bulan. "
-                f"Berdasarkan sebaran empiris stratifikasi pasar kerja, nilai kompensasi finansial di wilayah ini menduduki peringkat "
-                f"<strong>{prefix_rank}</strong> secara nasional di Jepang. Visualisasi diagram batang di samping merepresentasikan "
-                f"posisi spasial wilayah pilihan Anda dalam struktur hierarki distribusi upah makro."
+                f"Analisis perbandingan pada sektor industri <strong>{bidang}</strong> menunjukkan bahwa lokasi target "
+                f"pilihan Anda (<strong>{lokasi}</strong>) memiliki nilai rata-rata gaji pokok sebesar <strong>¥{nilai_gaji:,}</strong> per bulan. "
+                f"Berdasarkan data penyebaran lowongan kerja, nilai kompensasi keuangan di wilayah ini menduduki peringkat "
+                f"<strong>{prefix_rank}</strong> secara nasional di Jepang. Grafik batang di samping menampilkan "
+                f"posisi wilayah pilihan Anda dalam struktur tingkatan distribusi gaji."
             )
             
     return render_template('gaji.html', top_10=top_10_render, narasi=narasi, mhs=mhs)
@@ -156,11 +148,11 @@ def biayahidup():
                 
             nilai_hidup = int(data_mhs['biaya_hidup_nominal_yen'])
             narasi = (
-                f"Berdasarkan agregasi data statistik pengeluaran agregat bulanan (tidak termasuk instrumen sewa akomodasi), "
-                f"prefektur <strong>{lokasi}</strong> mencatatkan nilai ambang batas konsumsi finansial sebesar <strong>¥{nilai_hidup:,}</strong> per bulan. "
-                f"Indikator ini menempatkan wilayah amatan Anda pada peringkat <strong>{rank_mhs} dari {total_wilayah} prefektur</strong> "
-                f"dalam spektrum efisiensi biaya (diurutkan dari klaster paling minimum). Parameter ini diintegrasikan sebagai kriteria biaya "
-                f"(<em>cost</em>) dalam fungsi objektif pembobotan algoritma SAW."
+                f"Berdasarkan kumpulan data statistik mengenai pengeluaran bulanan (tidak termasuk biaya sewa tempat tinggal), "
+                f"prefektur <strong>{lokasi}</strong> mencatatkan nilai perkiraan biaya hidup sebesar <strong>¥{nilai_hidup:,}</strong> per bulan. "
+                f"Indikator ini menempatkan wilayah pilihan Anda pada peringkat <strong>{rank_mhs} dari {total_wilayah} prefektur</strong> "
+                f"dalam hal efisiensi pengeluaran (diurutkan dari daerah yang paling hemat). Parameter ini digunakan sebagai kriteria biaya "
+                f"di dalam perhitungan algoritma SAW."
             )
 
     return render_template('biayahidup.html', top_10=top_10_render, narasi=narasi, mhs=mhs)
@@ -199,15 +191,14 @@ def biayasewa():
                 
             nilai_sewa = int(data_mhs['biaya_sewa_nominal_yen'])
             narasi = (
-                f"Estimasi nilai rerata spasial untuk alokasi akomodasi dan asrama program internship di prefektur "
-                f"<strong>{lokasi}</strong> berada pada ekuilibrium <strong>¥{nilai_sewa:,}</strong> per bulan. Berdasarkan penelaahan "
-                f"secara komprehensif pada skala nasional, indeks biaya akomodasi wilayah sasaran Anda menempati peringkat "
-                f"ke-<strong>{rank_mhs} dari {total_wilayah} regional</strong> (dihitung dari ambang ekonomi paling kompetitif). "
-                f"Koefisien sewa pasar yang lebih rendah secara linier akan mengoptimalkan nilai preferensi akhir kriteria biaya pada pemodelan SAW."
+                f"Perkiraan nilai rata-rata untuk biaya sewa kamar atau asrama program magang di prefektur "
+                f"<strong>{lokasi}</strong> adalah sebesar <strong>¥{nilai_sewa:,}</strong> per bulan. Berdasarkan peninjauan "
+                f"secara menyeluruh di skala nasional, harga sewa akomodasi di wilayah target Anda menempati peringkat "
+                f"ke-<strong>{rank_mhs} dari {total_wilayah} wilayah</strong> (dihitung dari harga yang paling ekonomis). "
+                f"Biaya sewa yang lebih rendah secara langsung akan mengoptimalkan nilai kecocokan kriteria pengeluaran pada perhitungan SAW."
             )
 
     return render_template('biayasewa.html', top_10=top_10_render, narasi=narasi, mhs=mhs)
-
 
 @app.route('/alur/analisis-rasio-lowongan')
 def lowongan():
@@ -243,22 +234,19 @@ def lowongan():
                 top_10_render = df_filtered.head(9).to_dict(orient='records') + [data_mhs]
                 
             ratio_mhs = float(data_mhs['rasio_lowongan_kerja'])
-            keterangan_pasar = "mengalami saturasi positif (tingkat penyerapan tenaga kerja tinggi)" if ratio_mhs > avg_nasional else "berada pada fase restriktif (tingkat kompetisi tinggi)"
+            keterangan_pasar = "memiliki ketersediaan lowongan yang tinggi (peluang diterima besar)" if ratio_mhs > avg_nasional else "memiliki persaingan yang cukup ketat (jumlah pelamar lebih banyak dibanding lowongan)"
             
             narasi = (
                 f"Indeks rasio lowongan kerja (<em>Active Job Openings Ratio</em>) di prefektur <strong>{lokasi}</strong> "
-                f"mencatatkan koefisien sebesar <strong>{ratio_mhs}</strong>, sedangkan nilai rerata parameter nasional berada pada "
-                f"angka <strong>{avg_nasional}</strong>. Karakateristik makro pasar kerja pada wilayah sasaran dinilai "
-                f"<strong>{keterangan_pasar}</strong>, memposisikan wilayah tersebut pada urutan ke-<strong>{rank_mhs} dalam pemetaan "
-                f"kapasitas absorbsi tenaga kerja</strong> di Jepang."
+                f"mencatatkan nilai sebesar <strong>{ratio_mhs}</strong>, sedangkan nilai rata-rata untuk standar nasional berada pada "
+                f"angka <strong>{avg_nasional}</strong>. Kondisi pasar kerja pada wilayah sasaran dinilai "
+                f"<strong>{keterangan_pasar}</strong>, yang menempatkan wilayah tersebut pada urutan ke-<strong>{rank_mhs} dalam hal "
+                f"kemudahan penyerapan tenaga kerja</strong> di Jepang."
             )
 
     return render_template('lowongan.html', top_10=top_10_render, avg_nasional=avg_nasional, narasi=narasi, mhs=mhs)
 
-
-# =============================================================
 # 4. DECISION SUPPORT SYNTHESIS (MFEP VS SAW)
-# =============================================================
 @app.route('/rekomendasi')
 def rekomendasi():
     if 'mahasiswa' not in session or 'mfep_results' not in session:
@@ -280,35 +268,47 @@ def rekomendasi():
     saw = SAWSolver()
     df_saw_result = saw.calculate_saw(df_merged)
 
-    target_row = df_saw_result[df_saw_result['prefektur_en'].str.lower() == lokasi_target.lower()]
+    target_row = df_saw_result[df_saw_result['prefektur_en'].str.lower().str.contains(lokasi_target.lower())]
     
     saw_target_score = 0.0
     detail_target = None
+    detail_ekonomi = None
+    sisa_uang = 0
     
     if not target_row.empty:
-        saw_target_score = target_row.iloc[0]['saw_score_percentage']
         detail_target = target_row.iloc[0].to_dict()
+        saw_target_score = target_row.iloc[0]['saw_score_percentage']
+        
+        detail_ekonomi = {
+            'gaji_pokok_bulanan': int(detail_target.get('gaji_pokok_bulanan', 0)),
+            'biaya_hidup_nominal_yen': int(detail_target.get('biaya_hidup_nominal_yen', 0)),
+            'biaya_sewa_nominal_yen': int(detail_target.get('biaya_sewa_nominal_yen', 0)),
+            'bonus_tahunan_rata_rata': int(detail_target.get('bonus_tahunan_rata_rata', 0))
+        }
+        
+        # PERBAIKAN LOGIKA: Sisa uang murni bersih bulanan -> Gaji - (Biaya Hidup + Sewa)
+        sisa_uang = detail_ekonomi['gaji_pokok_bulanan'] - (detail_ekonomi['biaya_hidup_nominal_yen'] + detail_ekonomi['biaya_sewa_nominal_yen'])
 
     mfep_score = mfep_data['total_readiness_percentage']
     is_recommended = mfep_score >= saw_target_score
     
     if is_recommended:
         narasi = (
-            f"Berdasarkan sintesis komparatif antarmetode, variabel kesiapan internal subjek (MFEP) mencapai koefisien {mfep_score}%. "
-            f"Capaian kuantitatif tersebut berhasil melampaui indeks ambang kelayakan lingkungan eksternal (SAW) yang ditetapkan pada prefektur "
-            f"target <strong>{lokasi_target}</strong> untuk bidang <strong>{bidang}</strong>, dengan nilai ambang kebutuhan sebesar {saw_target_score}%. "
-            f"Melalui penelaahan berbasis optimasi parameter tersebut, keputusan alokasi penempatan wilayah ini dinyatakan "
-            f"<strong>SANGAT LAYAK & DIREKOMENDASIKAN</strong> bagi implementasi program internship mahasiswa."
+            f"Berdasarkan perbandingan antar-metode, nilai kesiapan internal diri Anda (MFEP) mencapai {mfep_score}%. "
+            f"Nilai tersebut berhasil melampaui batas minimal kelayakan lingkungan luar (SAW) yang dibutuhkan pada prefektur "
+            f"target <strong>{lokasi_target}</strong> untuk bidang <strong>{bidang}</strong>, dengan nilai standar sebesar {saw_target_score}%. "
+            f"Melalui hasil perhitungan parameter tersebut, pilihan penempatan wilayah ini dinyatakan "
+            f"<strong>SANGAT LAYAK & DIREKOMENDASIKAN</strong> bagi pelaksanaan program magang mahasiswa."
         )
     else:
         narasi = (
-            f"Berdasarkan hasil kalkulasi dan sintesis multikriteria, parameter kesiapan internal subjek (MFEP) saat ini berada pada tingkat {mfep_score}%. "
-            f"Di sisi lain, tuntutan indeks kelayakan makro lingkungan eksternal (SAW) untuk bidang pekerjaan <strong>{bidang}</strong> di prefektur "
-            f"sasaran <strong>{lokasi_target}</strong> menetapkan standar batas yang signifikan, yaitu sebesar {saw_target_score}%. Dikarenakan "
-            f"kapasitas kesiapan internal subjek secara empiris berada di bawah ambang batas (<em>under-threshold</em>) kebutuhan regional, "
-            f"maka penempatan di prefektur ini dinyatakan **TIDAK DIREKOMENDASIKAN**. Hal ini ditujukan guna memitigasi risiko kegagalan adaptasi "
-            f"sosio-finansial maupun mental subjek di lapangan. Sistem merekomendasikan peninjauan ulang terhadap klaster alternatif di bawah "
-            f"yang memiliki indeks kecocokan lebih realistis."
+            f"Berdasarkan hasil perhitungan gabungan, parameter kesiapan internal diri Anda (MFEP) saat ini berada pada tingkat {mfep_score}%. "
+            f"Di sisi lain, tuntutan nilai kelayakan lingkungan luar (SAW) untuk bidang pekerjaan <strong>{bidang}</strong> di prefektur "
+            f"target <strong>{lokasi_target}</strong> menetapkan standar batas yang tinggi, yaitu sebesar {saw_target_score}%. Dikarena "
+            f"tingkat kesiapan diri Anda berada di bawah batas minimal kebutuhan wilayah, "
+            f"maka penempatan di prefektur ini dinyatakan <strong>BELUM DIREKOMENDASIKAN</strong>. Hal ini ditujukan untuk mengurangi risiko "
+            f"kendala adaptasi sosial, keuangan, maupun kesiapan mental di lapangan. Sistem menyarankan untuk meninjau kembali daftar wilayah alternatif di "
+            f"bawah yang memiliki nilai kecocokan lebih realistis."
         )
 
     tabel_alternatif = df_saw_result.to_dict(orient='records')
@@ -321,13 +321,12 @@ def rekomendasi():
         detail_target=detail_target,
         narasi=narasi,
         is_recommended=is_recommended,
-        tabel_alternatif=tabel_alternatif
+        tabel_alternatif=tabel_alternatif,
+        detail_ekonomi=detail_ekonomi,
+        sisa_uang=sisa_uang
     )
 
-
-# =============================================================
 # 5. CORE SESSION MANAGEMENT
-# =============================================================
 @app.route('/reset')
 def reset():
     session.clear()

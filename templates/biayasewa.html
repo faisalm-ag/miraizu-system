@@ -245,6 +245,9 @@
         border-radius: 10px;
         transition: width 0.1s linear;
     }
+    .text-justify {
+        text-align: justify !important;
+    }
 
     @keyframes spin {
         0% { transform: rotate(0deg); }
@@ -327,7 +330,7 @@
                                     <h4 class="text-white fw-bold mb-1" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; line-height: 1.2;">Pembanding Basis Data</h4>
                                     <span class="text-uppercase text-cyan fw-bold d-block mb-3" style="font-size: 0.65rem; letter-spacing: 0.5px; color: var(--accent-cyan);">Evaluasi SPK SAW</span>
                                 </div>
-                                <p class="text-white-50 mb-0" style="font-size: 0.78rem; line-height: 1.6;">
+                                <p class="text-white-50 mb-0 text-justify" style="font-size: 0.78rem; line-height: 1.6;">
                                     Mahasiswa: <strong>{{ mhs.nama }}</strong><br>
                                     Membandingkan prefektur minat terhadap seluruh alternatif guna penentuan bobot kriteria pengeluaran sewa tempat tinggal (<em>cost</em>).
                                 </p>
@@ -339,7 +342,7 @@
                         <h5 class="text-white fw-semibold mb-2" style="font-size: 0.95rem;">
                             <i class="bi bi-file-earmark-text text-purple me-2" style="color: var(--accent-purple);"></i>Interpretasi Hasil Analisis
                         </h5>
-                        <div class="interpretation-box flex-grow-1" id="interpretationText">
+                        <div class="interpretation-box flex-grow-1 text-justify" id="interpretationText">
                             {{ narasi | safe }}
                         </div>
                     </div>

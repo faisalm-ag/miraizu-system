@@ -35,6 +35,16 @@ Miraizu System adalah platform pengambilan keputusan berbasis web yang dirancang
 
 ```
 
+## 🌐 Demo & Dukungan
+
+Aplikasi Miraizu System telah dihosting dan dapat diakses melalui:
+
+**URL:** https://Faisal07.pythonanywhere.com
+
+Apabila Anda mengalami kendala, menemukan bug, atau situs web tidak dapat diakses, silakan hubungi pengembang melalui email berikut:
+
+📧 **[faisalmuhamadabdulghani@gmail.com](mailto:faisalmuhamadabdulghani@gmail.com)**
+
 ### Cara Menjalankan Aplikasi
 
 1. **Klon Repositori & Masuk ke Direktori Proyek:**
@@ -94,6 +104,16 @@ Miraizu System is a web-based decision support system designed to help students 
 
 ```
 
+## 🌐 Live Demo & Support
+
+The Miraizu System application has been deployed and can be accessed at:
+
+**URL:** https://Faisal07.pythonanywhere.com
+
+If you encounter any issues, find bugs, or the website cannot be accessed, please contact the developer via email:
+
+📧 **[faisalmuhamadabdulghani@gmail.com](mailto:faisalmuhamadabdulghani@gmail.com)**
+
 ### How to Run
 
 1. **Clone the Repository & Navigate to Project Directory:**
@@ -152,6 +172,16 @@ Miraizu System（ミライズ・システム）は、学生が自身の内部的
 └── readme.md                   # プロジェクトドキュメント
 
 ```
+
+## 🌐 デモ・サポート
+
+Miraizu System は以下のURLで公開されており、利用することができます。
+
+**URL:** https://Faisal07.pythonanywhere.com
+
+不具合の発見、アクセス障害、またはご質問がございましたら、以下のメールアドレスまでご連絡ください。
+
+📧 **[faisalmuhamadabdulghani@gmail.com](mailto:faisalmuhamadabdulghani@gmail.com)**
 
 ### 起動方法
 
