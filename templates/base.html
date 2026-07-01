@@ -3,191 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MIRAIZU - SPK Keseluruhan Kesiapan Internship Jepang{% endblock %}</title>
-    
+
+    <title>{% block title %}MIRAIZU - Decision Support System for Working in Japan{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo/logo.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo/logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo/logo.png') }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <style>
-        :root {
-            --primary-bg: #05060A;       
-            --accent-pink: #FF2E93;     
-            --accent-indigo: #6366F1;    
-            --card-glass: rgba(13, 15, 24, 0.7); 
-            --border-glass: rgba(255, 255, 255, 0.04);
-            --pink-glow: rgba(255, 46, 147, 0.03); 
-            --text-main: #F3F4F6;
-            --text-muted: #9CA3AF;
+
+        :root{
+            --primary-bg:#05060A;
+            --accent-pink:#FF2E93;
+            --accent-indigo:#6366F1;
+            --card-glass:rgba(13,15,24,.7);
+            --border-glass:rgba(255,255,255,.04);
+            --pink-glow:rgba(255,46,147,.03);
+            --text-main:#F3F4F6;
+            --text-muted:#9CA3AF;
         }
 
-        body {
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
+        body{
+            background:var(--primary-bg);
+            color:var(--text-main);
+            font-family:'Plus Jakarta Sans',sans-serif;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+            overflow-x:hidden;
         }
 
-        header {
-            border-bottom: 1px solid var(--border-glass);
-            background: rgba(5, 6, 10, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 0.8rem 0;
-            z-index: 1030;
+        header{
+            border-bottom:1px solid var(--border-glass);
+            background:rgba(5,6,10,.8);
+            backdrop-filter:blur(20px);
+            -webkit-backdrop-filter:blur(20px);
+            padding:.8rem 0;
+            z-index:1030;
         }
 
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: transform 0.2s ease;
+        .brand-wrapper{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            transition:.2s;
         }
 
-        .brand-wrapper:hover {
-            transform: scale(1.02);
+        .brand-wrapper:hover{
+            transform:scale(1.02);
         }
 
-        .logo-kanji {
-            font-family: 'Space Grotesk', 'MS Gothic', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1;
-            color: #ffffff; 
-            letter-spacing: 1px;
-            padding-right: 10px;
-            border-right: 1px solid rgba(255, 255, 255, 0.15);
+        .logo-icon{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding-right:12px;
+            border-right:1px solid rgba(255,255,255,.15);
         }
 
-        .text-stack {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .logo-icon img{
+            width:44px;
+            height:44px;
+            object-fit:contain;
+            border-radius:10px;
         }
 
-        .logo-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, var(--accent-pink), #FFBE98);
-            -webkit-background-clip: text;
-            -webkit-text-color: transparent;
-            -webkit-text-fill-color: transparent;
+        .text-stack{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
         }
 
-        .logo-sub {
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            margin-top: 1px;
+        .logo-title{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.2rem;
+            font-weight:800;
+            line-height:1.1;
+            letter-spacing:1px;
+            background:linear-gradient(135deg,var(--accent-pink),#FFBE98);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
         }
 
-        .badge-method {
-            font-size: 0.7rem; 
-            letter-spacing: 1px;
-            font-weight: 600;
-            color: var(--text-main) !important; 
-            background-color: rgba(255, 255, 255, 0.02) !important; 
-            border: 1px solid rgba(255, 46, 147, 0.2) !important; 
-            padding: 0.4rem 0.9rem;
-            border-radius: 50px;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            white-space: text-nowrap;
+        .logo-sub{
+            font-size:.65rem;
+            color:var(--text-muted);
+            font-weight:500;
+            letter-spacing:.5px;
+            margin-top:1px;
         }
 
-        .badge-method:hover {
-            border-color: var(--accent-pink) !important;
-            background-color: rgba(255, 46, 147, 0.08) !important;
-            box-shadow: 0 0 15px rgba(255, 46, 147, 0.2);
+        .badge-method{
+            font-size:.7rem;
+            letter-spacing:1px;
+            font-weight:600;
+            color:var(--text-main)!important;
+            background:rgba(255,255,255,.02)!important;
+            border:1px solid rgba(255,46,147,.2)!important;
+            padding:.4rem .9rem;
+            border-radius:50px;
+            transition:.3s;
+            white-space:nowrap;
         }
 
-        .glass-card {
-            background: var(--card-glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border-glass);
-            border-radius: 20px;
+        .badge-method:hover{
+            border-color:var(--accent-pink)!important;
+            background:rgba(255,46,147,.08)!important;
+            box-shadow:0 0 15px rgba(255,46,147,.2);
         }
-        
-        .text-pink { color: var(--accent-pink); }
 
-        @media (max-width: 575.98px) {
-            header {
-                padding: 0.6rem 0;
+        .glass-card{
+            background:var(--card-glass);
+            backdrop-filter:blur(20px);
+            -webkit-backdrop-filter:blur(20px);
+            border:1px solid var(--border-glass);
+            border-radius:20px;
+        }
+
+        .text-pink{
+            color:var(--accent-pink);
+        }
+
+        @media(max-width:575.98px){
+
+            header{
+                padding:.6rem 0;
             }
-            .logo-kanji {
-                font-size: 1.25rem;
-                padding-right: 8px;
+
+            .logo-icon{
+                padding-right:8px;
             }
-            .logo-title {
-                font-size: 1rem;
+
+            .logo-icon img{
+                width:34px;
+                height:34px;
             }
-            .logo-sub {
-                font-size: 0.55rem;
+
+            .logo-title{
+                font-size:1rem;
             }
-            .badge-method {
-                font-size: 0.6rem;
-                padding: 0.3rem 0.7rem;
+
+            .logo-sub{
+                font-size:.55rem;
             }
+
+            .badge-method{
+                font-size:.6rem;
+                padding:.3rem .7rem;
+            }
+
         }
+
     </style>
+
 </head>
+
 <body>
 
-    <header class="sticky-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            
-            <a href="{{ url_for('index') }}" class="text-decoration-none brand-wrapper">
-                <div class="logo-kanji">未来図</div>
-                <div class="text-stack">
-                    <span class="logo-title">MIRAIZU</span>
-                    <span class="logo-sub">Decision Support System</span>
-                </div>
-            </a>
-            
-            <div class="badge-method text-uppercase">
-                MFEP & SAW Method
-            </div>
-            
-        </div>
-    </header>
+<header class="sticky-top">
 
-    <div class="container my-3">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show glass-card text-white border-0" role="alert" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
-                        <i class="bi bi-info-circle me-2 text-pink"></i>{{ message }}
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a href="{{ url_for('index') }}" class="text-decoration-none brand-wrapper">
+
+            <div class="logo-icon">
+                <img src="{{ url_for('static', filename='logo/logo.png') }}"
+                     alt="MIRAIZU Logo">
+            </div>
+
+            <div class="text-stack">
+                <span class="logo-title">MIRAIZU</span>
+                <span class="logo-sub">Decision Support System</span>
+            </div>
+
+        </a>
+
+        <div class="badge-method text-uppercase">
+            MFEP & SAW Method
+        </div>
+
     </div>
 
-    <main class="flex-shrink-0">
-        {% block content %}
-        {% endblock %}
-    </main>
+</header>
 
-    <footer class="text-center py-4 mt-auto text-white-50 border-top border-white border-opacity-5" style="font-size: 0.8rem; letter-spacing: 0.5px;">
-        <div class="container">
-            &copy; 2026 MIRAIZU • Sekolah Tinggi Teknologi Cipasung. Powered by Official Statistics of Japan.
-        </div>
-    </footer>
+<div class="container my-3">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show glass-card text-white border-0"
+                     role="alert"
+                     style="background:rgba(255,255,255,.05);backdrop-filter:blur(10px);">
+
+                    <i class="bi bi-info-circle me-2 text-pink"></i>{{ message }}
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="alert">
+                    </button>
+
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</div>
+
+<main class="flex-shrink-0">
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+<footer class="text-center py-4 mt-auto text-white-50 border-top border-white border-opacity-5"
+        style="font-size:.8rem;letter-spacing:.5px;">
+
+    <div class="container">
+        &copy; 2026 MIRAIZU • Sekolah Tinggi Teknologi Cipasung. Powered by Official Statistics of Japan.
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 </html>
